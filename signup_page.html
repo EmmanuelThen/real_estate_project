@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thenterprise-Signup</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <script src="./index.js" async></script>
+</head>
+<body>
+    <header>
+        <a href="./index.html"><img src="./resources/logo.png" width="80" height="80"></a>
+        <img src="./resources/darkmode.png" id="icon" width="25" height="25">
+        <nav>
+          <a href="./index.html">Home</a>
+          <a href="./signup_page.html">Sign up</a>
+          <a href="./login_page.html">Log in</a>
+          <a href="">Account</a>
+        </nav>
+    </header>
+    <main>
+       <img class="logo-login" src="./resources/logo.png" alt="" width="400" height="400">
+       <div class="form-container">
+        <form action="" method="POST">
+            <section>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" placeholder=" Enter email"required>
+            </section>
+            <br>
+            <section>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder=" Enter password" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W_]).{8,}$" required>
+                <p>* At least 8 characters</p>
+                <p>* Both letters and numbers</p>
+                <p>* At least one uppercase letter and one lowercase letter</p>
+                <p>* At least 1 special character</p>
+            </section>
+            <section>
+                <label for="verify-pw">Re-enter Password:</label>
+                <input type="password" name="verify-pw" id="verify-pw" placeholder=" Re-enter password" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W_]).{8,}$" required>
+            </section>
+            <br>
+            <section>
+                <label for="security-question">Select a security question:</label>
+                <select name="security-question" id="security-question" required>
+                    <option value="What is your first pets name?">What is your first pets name?</option>
+                    <option value="What year did you graduate highschool?">What year did you graduate highschool?</option>
+                    <option value="What is your mothers maiden name?">What is your mothers maiden name?</option>
+                    <option value="What is the make and model of your first car?">What is the make and model of your first car?</option>
+                    <option value="What city were you born in?">What city were you born in?</option>
+                </select>
+            </section>
+            <br>
+            <section>
+                <label for="security-answer">Answer to security question:</label>
+                <input type="text" name="security-answer" id="security-answer" placeholder=" Answer" required>
+            </section>
+            <section>
+                <input class="login-button" type="submit" value="Sign up!">
+            </section>
+        </form>
+       </div> 
+    </main>
+</body>
+<footer>
+    <a href=""><h3>About</h3></a>
+    <a href=""><h3>Support</h3></a>
+    <a href=""><h3>Membership</h3></a>
+    <a href=""><h3>Follow us</h3></a>
+</footer>
+</html>

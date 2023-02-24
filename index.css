@@ -1,0 +1,333 @@
+/* Top Header (Nav and main) */
+html{
+    background-color: var(--primary-color);
+    font-size: 16px;
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px), (orientation: portrait), (orientation: landscape){
+    
+    body{
+      width: auto;  
+    }
+    
+}
+
+@media only screen and (min-height: 320px) and (max-height: 1200px), (orientation: portrait), (orientation: landscape){
+    
+    body{
+        height: auto;
+    }
+    
+} 
+
+:root {
+    --primary-color: #edf2fc;
+    --secondary-color: #212121; 
+}
+
+.dark-theme {
+    --primary-color: #000106;
+    --secondary-color: #fff;
+}
+
+/* CSS for Header */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    border: 5px solid mediumspringgreen;
+    margin-bottom: 5px;
+    font-family: Questrial, "Times New Roman", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    overflow: hidden;
+}
+
+#icon {
+    cursor: pointer;
+}
+
+nav a{
+    margin: 30px;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+nav a:hover, nav a:active{
+    cursor: pointer;
+    color: mediumspringgreen;
+}
+
+/* CSS for main */
+.header-logo-big{
+    width: 100%;
+    height: 600px;
+    border-radius: 20px;
+    border: 5px solid mediumspringgreen;
+}
+
+.grids{
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    height: 500px;
+    gap: 20px;
+    font-family: Questrial, "Times New Roman", sans-serif;
+    font-weight: 900;
+    text-align: center;
+}
+
+.grids h2{
+    border: 5px solid mediumspringgreen;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--secondary-color);
+}
+
+/* Context CSS */
+.welcome-home{
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-family: Questrial, "Times New Roman", sans-serif;
+    align-items: center;
+}
+
+.context-description{
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+
+
+/* Pricing and Subscription CSS */
+.pricing-and-sub{
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+    gap: 20px;
+    font-family: Questrial, "Times New Roman", sans-serif;
+    justify-items: center;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    
+}
+
+.bronze, .silver, .gold{
+    border: 5px solid mediumspringgreen;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--secondary-color);
+   
+}
+
+/* Buttons in pricing */
+.bronze button{
+    border-radius: 10px;
+    border: 5px solid #CD7F32 ;
+    background-color: #CD7F32;
+    font-family: Questrial, "Times New Roman", sans-serif;
+    font-weight: 900;
+    width: 150px;
+      
+}
+
+.silver button{
+    border-radius: 10px;
+    border: 5px solid #C0C0C0 ;
+    background-color: #C0C0C0;
+    font-family: Questrial, "Times New Roman", sans-serif;
+    font-weight: 900;
+    width: 150px;
+}
+
+.gold button{
+    border-radius: 10px;
+    border: 5px solid #FFD700 ;
+    background-color: #FFD700;
+    font-family: Questrial, "Times New Roman", sans-serif;
+    font-weight: 900;
+    width: 150px;
+}
+
+
+.sign-up-button{
+    display: flex;
+    border: 5px solid mediumspringgreen;
+    border-radius: 20px;
+    font-weight: 900;
+    font-family: Questrial, "Times New Roman", sans-serif;
+    font-size: 1.2rem;
+    margin: 0px 160px;
+    margin-bottom: 20px;
+    background-color: mediumspringgreen;
+    
+    
+}
+
+.sign-up-button a{
+    text-decoration: none;
+    color: var(--secondary-color);;
+    align-items: center;
+    
+    
+    
+}
+
+.bronze .sign-up-button a:hover{
+    color: #CD7F32;
+}
+
+.silver .sign-up-button a:hover{
+    color: #C0C0C0;
+}
+
+.gold .sign-up-button a:hover{
+    color: #FFD700;
+}
+
+/* Footer CSS */
+footer{
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin-top: 50px;
+    border: 5px solid mediumspringgreen;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    
+}
+
+footer a{
+    color: var(--secondary-color);;
+    font-family: Questrial, "Times New Roman", sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    
+}
+
+
+footer a:hover{
+    cursor: pointer;
+    color: mediumspringgreen;
+    
+}
+
+
+/* Styling for log in page*/ 
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    text-align: center;
+    
+}
+
+form {
+    display: block;
+    text-align: inherit;
+    overflow: auto;
+    font-family: Questrial, "Times New Roman", sans-serif;
+    border: 5px solid mediumspringgreen;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    margin-bottom: 5%;
+    padding: 30px;
+    max-width: 30%;
+}
+
+form a {
+    color: blueviolet;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+form h1 {
+    text-align: center;
+    color: var(--secondary-color);;
+    margin-bottom: 30px;
+}
+
+form h4 {
+    margin-bottom: 5px;
+    color: var(--secondary-color);;
+}
+
+form input, form select{
+    border: 3px solid mediumspringgreen;
+    font-family: Questrial, "Times New Roman", sans-serif;
+    height: 30px;
+    border-radius: 10px;
+}
+
+form input:hover, form select:hover {
+    border: 3px solid white;
+
+}
+
+.logo-login {
+    display: flex;
+    margin: auto;
+}
+
+/* if i want to use <a> for login button and not a submit <input>
+.login-button a{
+    
+    text-decoration: none;
+    color: mediumspringgreen;
+    border: 5px solid mediumspringgreen;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    font-family: Questrial, "Times New Roman", sans-serif;
+    font-weight: 900;
+    padding: 10px;
+    
+} */
+
+.login-button {
+    margin-top: 40px;
+    border: 3px solid mediumspringgreen;
+    font-weight: 900;
+    background-color: mediumspringgreen;
+}
+
+.login-button:hover{
+    cursor: pointer;
+    border: 6px solid mediumspringgreen;
+    
+}
+
+label {
+    color: var(--secondary-color);;
+}
+
+
+/* Styling for signup_page */
+
+section p {
+    font-size: 0.6em;
+    color: var(--secondary-color);;
+    
+    text-align: center;
+    line-height: 2px;
+    text-align: inherit;
+}
+
