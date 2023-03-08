@@ -7,102 +7,249 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thenterprise</title>
   <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./animations.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa&family=Questrial&display=swap" rel="stylesheet">
-  <script src="./index.js" async></script>
+  <script src="./index.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 
 <body>
   <header>
-    <a href="./index.html"><img src="./resources/logo.png" width="80" height="80"></a>
-    <img src="./resources/darkmode.png" id="icon" width="25" height="25">
+    <div class="links-container">
+      <a class="home-logo-top" href="./index.html"><img src="./resources/logo.png" width="60" height="60"></a>
+      <a href="">Residential</a>
+      <a href="">Commercial</a>
+      <a href="">Forum</a>
+      <a href="">Pricing</a>
+      <a href="">Free-Trial</a>
+    </div>
+    
     <nav>
-      <a href="./index.html">Home</a>
-      <a href="./signup_page.html">Sign up</a>
-      <a href="./login_page.html">Log in</a>
-      <a href="">Account</a>
+      
+          <button><a href="./login_page.html">Log in</a></button>
+          <button><a href="./signup_page.html">Sign up</a></button> 
+          <img src="./resources/darkmode.png" id="icon" width="25" height="25">
     </nav>
+    
+    
   </header>
-
-  <main>
+  
+  
+    <!-- <img id="background-img" src="./resources/pexels-pixabay-358636.jpg"> -->
     <div class="welcome-home">
-        <img class="context-logo" src="./resources/logo.png" width="300" height="300">
-        <h1>Welcome Home.</h1>
+     <div class="logo-welcome-home"> 
+      <h1>Welcome Home</h1>
+     </div> 
+      <div id="search-bar-container">
+        <form class="search-bar" action="">
+          <input type="text" name="search-bar" id="search-bar" placeholder="Enter address, city or ZIP">
+          <button id="index-page-search">Search</button>
+        </form> 
+      </div> 
+    </div>  
+
+
+    
+    
+  <main>
+    
+    <div class="bottom-container0">
+      <h1>Your home for everything real estate <i class="fas fa-city"></i></h1>
+      <p>DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription</p>
+      <p>DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription</p>
+      <p>DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription</p>
+      <p>DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription</p>
+      <br>
+      <div class="logos">
+        <div class="buy-top">
+           <h3>Buy</h3>
+           <i class="fa-solid fa-house-user"></i>
+        </div>
+        <div class="sell-top">
+           <h3>Sell</h3>
+           <i class="fas fa-hand-holding-usd"></i>
+        </div>
+        <div class="rent-top">
+           <h3>Rent</h3>
+           <i class="fas fa-building"></i>
+        </div>
+        <div class="invest-top">
+          <h3>Invest</h3>
+          <i class="fas fa-chart-line"></i>
+        </div>
+     </div>
     </div>
 
-    <img class="header-logo-big" src="./resources/pexels-pixabay-358636.jpg" style="opacity: 0.8;">
-    <div class="context-description">
-      <h2>'Inset text here''Inset text here''Inset text here''Inset text here''Inset text here''Inset text here''Inset text here''Inset text here'
-        'Inset text here''Inset text here''Inset text here''Inset text here''Inset text here''Inset text here'
-        'Inset text here''Inset text here''Inset text here''Inset text here''Inset text here''Inset text here'
-      </h2>
+    <div class="bottom-container2">
+      <h1 class="hidden">Trending Homes <i class="fas fa-chart-line"></i></h1>
+      <p class="hidden">*Users-Location*</p>
+      <br>
+      <div class="trending-city-container hidden">
+        <div class="citiez hidden">
+          <img src="./resources/nyc-skyline.jpg" width="100" height="100" alt="">
+        </div>
+        <div class="citiez hidden">
+          <img src="./resources/nyc-skyline.jpg" width="100" height="100" alt="">
+        </div>
+        <div class="citiez hidden">
+          <img src="./resources/nyc-skyline.jpg" width="100" height="100" alt="">
+        </div>
+      </div>
     </div>
-    <section class="grids">
-      <h2>Trending Markets</h2>
-      <h2>Trending Markets</h2>
-      <h2>Trending Markets</h2>
-      <h2>Trending Markets</h2>
-      <h2>Trending Markets</h2>
-      <h2>Trending Markets</h2>
-    </section>
-    <br>
-    <section class="pricing-and-sub">
-      <div class="bronze">
-        <h1>Thenterprise Bronze</h1>
-        <img src="./resources/logo (1).png" width="150" height="150" alt="">
-        <div>
-          <button type="button">FREE</button>
+
+    
+     
+ 
+
+
+
+  <div class="grid-container-container"> 
+    
+      <div class="grid-container hidden">
+        <div class="city">
+            <div class="circle"></div>
+            <img src="./resources/logo (2).png" alt="Elite Logo">
         </div>
-        <h2>'Inset text here''Inset text here'</h2>
-        <h2>'Inset text here'Inset text here'</h2>
-        <h2>'Inset text here'Inset text here'</h2>
-        <h2>'Inset text here'Inset text here'</h2>
-        <h2>'Inset text here'Inset text here'</h2>
-        <div class="sign-up-button">
-          <a href="./signup_page.html">Sign up!</a>
-        </div>
+        <h1>Thenterprise Elite Members Get Even More</h1>
+    
+        
       </div>
-      <div class="silver">
-        <h1>Thenterprise Silver</h1>
-        <img src="./resources/logo (2).png" width="150" height="150" alt="">
-        <div>
-          <button type="button">$1.99/month</button>
-        </div>
-        <h2>'Inset text here''Inset text here'</h2>
-        <h2>'Inset text here'Inset text here'</h2>
-        <h2>'Inset text here'Inset text here'</h2>
-        <h2>'Inset text here'Inset text here'</h2>
-        <h2>'Inset text here'Inset text here'</h2>
-        <div class="sign-up-button">
-          <a href="./signup_page.html">Sign up!</a>
-        </div>
+
+      <div class="elite-description hidden">
+      
+        <table>
+          <tr>
+            <th id="free">Features</th>
+            <th id="free">Thenterprise</th>
+            <th>Thenterprise Elite</th>
+            
+          </tr>
+          
+          
+          
+            
+          
+          
+          <tr>
+            <td id="free">Property Search</td>
+            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
+            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
+          </tr>
+          
+          <tr>
+            <td id="free">Buy, Sell, Rent</td>
+            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
+            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
+          </tr>
+  
+          <tr>
+            <td id="free">Monthly Newsletter</td>
+            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
+            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
+          </tr>
+  
+          <tr>
+            <td>Feature</td>
+            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
+            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
+          </tr>
+  
+          <tr>
+            <td>Feature</td>
+            <td><i  id="xmark" class="fa-solid fa-circle-xmark"></i></td>
+            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
+          </tr>
+  
+          <tr>
+            <td>Feature</td>
+            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
+            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
+          </tr>
+  
+          <tr>
+            <td>Feature</td>
+            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
+            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
+          </tr>
+
+          <tr>
+            <td>Feature</td>
+            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
+            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
+          </tr>
+
+          <tr>
+            <td>Feature</td>
+            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
+            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
+          </tr>
+
+          <tr>
+            <td>Feature</td>
+            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
+            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
+          </tr>
+  
+          <tr>
+            <td></td>
+            <td><a href="./signup_page.html" class="table-price" id="free">FREE</a></td>
+            <td><a href="" class="table-price">$49.99/mo.</a></td>
+          </tr>
+  
+          <tr>
+            <td></td>
+            <td><button class="table-btn">Sign Up</button></td>
+            <td><button class="table-btn2">Purchase</button></td>
+          </tr>
+        </table>
+        
       </div>
-      <div class="gold">
-        <h1>Thenterprise Gold</h1>
-        <img src="resources/logo (3).png" width="150" height="150" alt="">
-        <div>
-          <button type="button">$4.99/month</button>
-        </div>
-        <h2>'Inset text here''Inset text here'</h2>
-        <h2>'Inset text here'Inset text here'</h2>
-        <h2>'Inset text here'Inset text here'</h2>
-        <h2>'Inset text here'Inset text here'</h2>
-        <h2>'Inset text here'Inset text here'</h2>
-        <div class="sign-up-button">
-          <a href="./signup_page.html">Sign up!</a>
-        </div>
-      </div>
-    </section>
+    </div>
+  
+
+ 
+
+
+
+
+
+    
+
+
+
+
+
+    <div class="bottom-container">
+      
+      <h2>Content</h2>
+    </div>
+
+    <div class="bottom-container2">
+      
+      <h2>Content</h2>
+    </div>
+
   </main>
 </body>
+
 <footer>
+  <a href="./index.html"><img src="./resources/logo.png" width="80" height="80"></a>
   <a href=""><h3>About</h3></a>
   <a href=""><h3>Support</h3></a>
   <a href=""><h3>Membership</h3></a>
   <a href=""><h3>Follow us</h3></a>
+  <div class="social-links">
+      <a href=""><i class="fab fa-twitter"></i></a>
+      <a href=""><i class="fab fa-instagram"></i></a>
+      <a href=""><i class="fab fa-facebook"></i></a>
+      <a href=""><i class="fab fa-tiktok"></i></a>
+  </div>
 </footer>
+
+
 </html>

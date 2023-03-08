@@ -6,26 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thenterprise-Signup</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./form.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <script src="./index.js" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <a href="./index.html"><img src="./resources/logo.png" width="80" height="80"></a>
-        <img src="./resources/darkmode.png" id="icon" width="25" height="25">
+        <div class="links-container">
+          <a class="home-logo-top" href="./index.html"><img src="./resources/logo.png" width="60" height="60"></a>
+          <a href="">Residential</a>
+          <a href="">Commercial</a>
+          <a href="">Forum</a>
+          <a href="">Pricing</a>
+          <a href="">Free-Trial</a>
+        </div>
+        
         <nav>
-          <a href="./index.html">Home</a>
-          <a href="./signup_page.html">Sign up</a>
-          <a href="./login_page.html">Log in</a>
-          <a href="">Account</a>
+          
+              <button><a href="./login_page.html">Log in</a></button>
+              <button><a href="./signup_page.html">Sign up</a></button> 
+              <img src="./resources/darkmode.png" id="icon" width="25" height="25">
         </nav>
-    </header>
+        
+        
+      </header>
+    
     <main>
        <img class="logo-login" src="./resources/logo.png" alt="" width="400" height="400">
        <div class="form-container">
-        <form action="" method="POST">
+        <form class="signup-form" action="" method="POST">
             <section>
                 <label for="email">Email:</label>
                 <input type="text" name="email" id="email" placeholder=" Enter email"required>
@@ -36,7 +48,6 @@
                 <input type="password" name="password" id="password" placeholder=" Enter password" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W_]).{8,}$" required>
                 <p>* At least 8 characters</p>
                 <p>* Both letters and numbers</p>
-                <p>* At least one uppercase letter and one lowercase letter</p>
                 <p>* At least 1 special character</p>
             </section>
             <section>
@@ -59,17 +70,24 @@
                 <label for="security-answer">Answer to security question:</label>
                 <input type="text" name="security-answer" id="security-answer" placeholder=" Answer" required>
             </section>
-            <section>
-                <input class="login-button" type="submit" value="Sign up!">
-            </section>
+            <button  id="sign-up-button" type="submit">Sign up</button>
         </form>
        </div> 
+       
     </main>
 </body>
+
 <footer>
+    <a href="./index.html"><img src="./resources/logo.png" width="80" height="80"></a>
     <a href=""><h3>About</h3></a>
     <a href=""><h3>Support</h3></a>
     <a href=""><h3>Membership</h3></a>
     <a href=""><h3>Follow us</h3></a>
-</footer>
+    <div class="social-links">
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-tiktok"></i></a>
+    </div>
+  </footer>
 </html>
