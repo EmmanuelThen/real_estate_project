@@ -1,0 +1,14 @@
+.cap-rate-calc, .NOI-calc {
+    outline: 1px solid red;
+    
+}
+
+.NOI-calc input, .cap-rate-calc input {
+    display: block;
+    margin: 10px;
+}
+
+.NOI-calc #net-operating-income, #net-operating-income-annual, #total-Opex {
+    color: rgba(0, 230, 165);
+    font-weight: bolder;
+}

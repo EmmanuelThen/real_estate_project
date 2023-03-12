@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thenterprise</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./calculators-style.css">
+  <link rel="stylesheet" href="./animations.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa&family=Questrial&display=swap" rel="stylesheet">
+  <script type="module" src="./index.js"></script>
+  <script type="module" src="./calculators.js" ></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="links-container">
+      <a class="home-logo-top" href="./index.html"><img src="./resources/logo.png" width="60" height="60"></a>
+      <a href="">Residential</a>
+      <a href="">Commercial</a>
+      <a href="">Forum</a>
+      <a href="">Pricing</a>
+      <a href="">Free-Trial</a>
+    </div>
+    
+    <nav>
+      
+          <button><a href="./login_page.html">Log in</a></button>
+          <button><a href="./signup_page.html">Sign up</a></button> 
+          <img src="./resources/darkmode.png" id="icon" width="25" height="25">
+    </nav>
+    
+    
+  </header>
+  <main>
+    <div class="cap-rate-calc">
+      <h1>Cap Rate Calculator</h1>
+      <div>
+        <label for="property-value">Property Value:</label>
+        <input type="number" id="property-value" min="0" placeholder="Enter Property Value">
+      </div>
+      <div>
+        <label for="net-operating-income">Annual NOI:</label>
+        <input type="number" id="net-operating-income" min="0" placeholder="Enter Annual NOI">
+      </div>
+      <div>
+        <label for="cap-rate">Cap Rate:</label>
+        <output id="cap-rate"></output>
+      </div>
+    </div>
+
+    <div class="NOI-calc">
+      <h1>NOI monthly</h1>
+      <div>
+        <label for="gross-income">Gross Income:</label>
+        <input type="number" id="gross-income" min="0" placeholder="Enter Gross Income">
+      </div>
+      <div class="operating-expenses">
+        <label for="exp-1">Property Management:</label>
+        <input type="number" id="exp-1" min="0" placeholder="Enter Expense">
+        <label for="exp-2">Property Taxes:</label>
+        <input type="number" id="exp-2" min="0" placeholder="Enter Expense">
+        <label for="exp-3">Vacany Reserves:</label>
+        <input type="number" id="exp-3" min="0" placeholder="Enter Expense">
+        <label for="exp-4">Maintenance Reserves:</label>
+        <input type="number" id="exp-4" min="0" placeholder="Enter Expense">
+        <label for="exp-5">Insurance:</label>
+        <input type="number" id="exp-5" min="0" placeholder="Enter Expense">
+        <label for="exp-6">Utilities:</label>
+        <input type="number" id="exp-6" min="0" placeholder="Enter Expense">
+      </div>
+      <div>  
+        <label for="total-Opex">Total Operating Expenses:</label>
+        <output id="total-Opex"></output>
+      </div>
+      <div>  
+        <label for="net-operating-income">Monthly NOI:</label>
+        <output id="net-operating-income"></output>
+      </div>
+      <div>  
+        <label for="net-operating-income-annual">Annual NOI:</label>
+        <output id="net-operating-income-annual"></output>
+      </div>
+    </div>
+
+    <div class="mortgage-calc">
+      <h1>Mortgage Calculator</h1>
+      <div>
+        <label for="sale-price">Sale Price:</label>
+        <input type="number" id="sale-price" min="0" placeholder="Enter Sale Price">
+      </div>
+
+      <div>
+        <label for="down-pmt">Down Payment:</label>
+        <input type="number" id="down-pmt" min="0" placeholder="Enter Down Payment">
+      </div>
+
+      <div>
+        <label for="closing-cost">Closing Cost</label>:</label>
+        <input type="number" id="closing-cost" min="0" placeholder="Enter Closing Cost">
+      </div>
+
+      <div>
+        <label for="ltv-ratio">Loan-to-value Ratio:</label>
+        <input type="number" id="ltv-ratio" min="0" placeholder="Enter LTV Ratio">
+      </div>
+
+      <div>
+        <label for="principal">Principal:</label>
+        <input type="number" id="principal" min="0" placeholder="Enter Principal">
+      </div>
+
+      <div>
+        <label for="int">Interest Rate:</label>
+        <input type="number" id="int" min="0" placeholder="Enter Interest Rate">
+      </div>
+
+      <div>
+        <label for="loan-term">Loan Term (In Years):</label>
+        <input type="number" id="loan-term" min="0" placeholder="Enter Loan Term">
+      </div>
+
+      <div>
+        <label for="monthly-mortgage">Monthly Mortgage:</label>
+        <output id="monthly-mortgage"></output>
+      </div>
+
+      <div>
+        <label for="monthly-profit">Monthly Net Profit:</label>
+        <output id="monthly-profit"></output>
+      </div>
+
+      <div>
+        <label for="annual-profit">Annual Net Profit:</label>
+        <output id="annual-profit"></output>
+      </div>
+
+      <div>
+        <label for="annual-ROI">Annual ROI:</label>
+        <output id="annual-ROI"></output>
+      </div>
+    </div>
+
+  </main>
+  </body>
