@@ -1,9 +1,9 @@
 const darkModeToggle = () => {
     document.body.classList.toggle('dark-theme');
     if (document.body.classList.contains('dark-theme')) {
-        icon.src = 'resources/lightmode.png';
+        icon.src = '../resources/lightmode.png';
     } else {
-        icon.src = 'resources/darkmode.png';
+        icon.src = '../resources/darkmode.png';
     }
 };
 

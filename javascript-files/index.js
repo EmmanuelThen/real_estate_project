@@ -1,4 +1,4 @@
-import domActivities from "./modules/dom-functions.js";
+import domActivities from "../modules/dom-functions.js";
 const { darkModeToggle, blurFunction } = domActivities;
 
 /* Toggle for darkmode */
