@@ -1,0 +1,22 @@
+{
+  "name": "real_estate_project",
+  "version": "1.0.0",
+  "description": "real estate investing website",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmmanuelThen/real_estate_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmmanuelThen/real_estate_project/issues"
+  },
+  "homepage": "https://github.com/EmmanuelThen/real_estate_project#readme",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}

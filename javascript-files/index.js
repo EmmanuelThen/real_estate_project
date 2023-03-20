@@ -12,6 +12,12 @@ searchBar.onclick = () => {
     blurFunction(backgroundImg);
 };
 
+
+
+
+
+
+
 //animate in from left side (intersection observer)
 //This is a class that takes a callback function as its constructor, this is our boiler plate for our observer now we just have to tell it what to observe 
 const observer = new IntersectionObserver((entries) => {
@@ -26,6 +32,8 @@ const observer = new IntersectionObserver((entries) => {
 });
 const hiddenElements = document.querySelectorAll('.hidden'); // Grabbing all elements with 'hidden' class 
 hiddenElements.forEach((element) => observer.observe(element)); //Telling observer to observe each hidden element
+
+
 
 
 

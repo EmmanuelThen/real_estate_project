@@ -4,12 +4,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*outline: 1px solid red !important; */
+   /* outline: 1px solid red !important; */
    /* background: rgb(100 0 0 / 0.1) !important; */
 }
 
 body {
-    background-color: var(--primary-color);
+    background-color: #a9a9a9 ;
+    /*background: url(../resources/blurry_background.svg);*/
     font-size: 16px;
     font-family: Questrial, "Times New Roman", sans-serif;
 }
@@ -30,11 +31,6 @@ body {
     
 } */
 
-
-
-
-
-
 :root {
     --primary-color: #edf2fc;
     --secondary-color: #212121; 
@@ -43,32 +39,34 @@ body {
 .dark-theme {
     --primary-color: #252525;
     --secondary-color: #fff;
-}
+}  
 
 main {
-    display: grid;
+    /*display: grid;
     min-height: 100vh;
     font-family: Questrial, "Times New Roman", sans-serif;
     place-items: center;
     overflow:  hidden;
     margin: 0;
-    background-color: var(--primary-color);
-    font-size: 0.75rem;
+    /*background-color: */
+    /*font-size: 0.75rem;*/
 }
+
 /* CSS for Header */
 header {
-    color: var(--secondary-color);
+    color: #212121;
     display: flex;
     justify-content: space-between;
     max-height: 4vh;
     z-index: 1;
     position: fixed;
     width: 100%;
-    background: rgba(169, 169, 169);
-    margin-bottom: 1rem;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    
     font-family: Questrial, "Times New Roman", sans-serif;
     font-size: 1rem;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 
@@ -89,7 +87,7 @@ header nav {
 }
 
 .links-container a:hover {
-    color: rgba(0, 230, 165);
+    color: skyblue;
 }
 
 
@@ -103,10 +101,10 @@ header button {
     cursor: pointer;
 }
 
-nav a, .links-container a{
+nav a, .links-container a {
     margin: 30px;
     text-decoration: none;
-    color: var(--secondary-color);
+    color: #212121;
 }
 
 
@@ -115,14 +113,38 @@ nav a, .links-container a{
 
 /* CSS for main */
 
-.welcome-home{ /* fix this when smaller window position goes over header links*/
-  color: var(--secondary-color);
+.welcome-home{ 
+  color: #212121;
   font-size: 2rem;
   text-align: center;
   filter: blur(0px);
   transition: filter 0.3s ease-in-out;
-  line-height: 15rem;
+  background-image: url(../resources/main-page-banner1.svg);
+  background-size: cover;
+  padding: 50px;
+  line-height: 10rem;
+  position: relative;
 } 
+
+.welcome-home::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3); /* Add desired opacity value */
+  }
+  
+  /* Adjust the z-index property to ensure the overlay is behind the content */
+  .welcome-home > * {
+    position: relative;
+    z-index: 1;
+  }
+
+
+
 
 .logo-welcome-home {
    padding-top: 4rem;
@@ -142,17 +164,23 @@ nav a, .links-container a{
    display: block;
    padding: 2rem 10rem;
    font-size: 1.3rem;
+   font-family: Questrial, 'Times New Roman', sans-serif;
    
 }
+
+#index-page-search {
+    color: #212121;
+}
+
 
 
 
 button {
     color: var(--secondary-color);
-    border-radius: 30px;
+    border-radius: 7px;
     border: none;
     cursor: pointer;
-    background: rgba(0, 230, 165);
+    background: skyblue;
     padding: 1rem 3rem;
     font-family: Questrial, "Times New Roman", sans-serif;
     font-weight: bold;
@@ -176,20 +204,22 @@ button:hover {
 
 
 .grid-container-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+    background: url(../resources/blurry_background.svg);
+    align-content: space-between;
     /*min-width: 100%;*/
     /*min-height: 60vh;*/
-    /*background-color: rgba(0, 230, 165);*/
-    background: rgba(169, 169, 169, 0.2);
+    /*background-color: skyblue;*/
+    /*background: url(../resources/elite_background.svg);*/
     width: 100%;
     padding: 50px 0px;
-    margin: 0rem 20rem;
+    
 }
 
 .elite-description {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     color: black;
     text-align: center;
     font-size: 2rem;
@@ -198,7 +228,7 @@ button:hover {
 
 
 
-table {
+#index-table {
     background-color: var(--primary-color);
     display: flex;
     justify-content: center;
@@ -213,18 +243,18 @@ table {
 
 
 
-tr th {
+#index-table tr th {
     font-weight: 900;
     padding: 2rem;
     cursor: default;
-    background-image: linear-gradient(90deg, rgba(0, 230, 165), blue, aqua, skyblue); 
+    background-image: linear-gradient(90deg, skyblue, blue, aqua, skyblue); 
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
-tr td {
-    background-image: linear-gradient(90deg, rgba(0, 230, 165), blue, aqua, skyblue); 
+ #index-table td {
+    background-image: linear-gradient(90deg, skyblue, blue, aqua, skyblue); 
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -233,7 +263,7 @@ tr td {
     font-size: 1.2rem;
 }
 
-td a {
+#index-table td a {
     text-decoration: none;
 }
 
@@ -253,11 +283,23 @@ td a {
     /*background-color: var(--secondary-color);*/
     /*width: 50%;*/
     text-align: center;
+    display: flex;
+    justify-content: center;
     /*min-height: 50vh;*/
     /*perspective: 1000px; dont knw yet because when u move it it goes over headerlogobig*/
     /*background: pink; */
 }
   
+.grid-container h1 {
+    display: flex;
+    align-items: center;
+}
+
+/*.mid-mid {
+    background: #252525;
+    width: 100%;
+    
+}*/
 
 
 
@@ -286,6 +328,7 @@ td a {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     /*background: mediumspringgreen;*/
     
 }
@@ -294,16 +337,10 @@ td a {
     width: 20rem;
     z-index: 2;
     transition: all 0.75s ease-out;
+    
 }
 
-.circle {
-    width: 15rem;  /*to make perfect circle */
-    height: 15rem; /*to make perfect circle */
-    background: linear-gradient(90deg, blue, rgba(0, 230, 165), aqua, skyblue); 
-    position: absolute;
-    border-radius: 50%;
-    z-index: 1;
-}
+
 
 
 
@@ -314,7 +351,7 @@ td a {
 }
 
 .sizes button, .table-price {
-    background-image: linear-gradient(90deg, rgba(0, 230, 165), blue, aqua, skyblue); 
+    background-image: linear-gradient(90deg, skyblue, blue, aqua, skyblue); 
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -337,18 +374,18 @@ td a {
 .purchase button, .table-btn2 {
     width: 50%;
     padding: 1rem 0rem;
-    background: linear-gradient(90deg, blue, rgba(0, 230, 165), aqua, skyblue);
+    background: linear-gradient(90deg, blue, skyblue, aqua, skyblue);
     border: none;
     color: var(--secondary-color);
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 7px;
     font-weight: bolder;
     transition: all 0.50s ease-out;
     margin: auto;
 }
 
 .table-btn {
-    background: rgba(0, 230, 165);
+    background: skyblue;
     margin: auto;
     width: 50%;
     padding: 1rem 0rem;
@@ -393,7 +430,7 @@ td a {
 }
 
 .buy-top, .sell-top, .rent-top, .invest-top {
-    background: rgba(0, 230, 165);
+    background: skyblue;
     color: #212121;
     font-size: 1.2rem;
     display: flex;
@@ -401,7 +438,7 @@ td a {
 }
 
 .logo:hover, .buy-top:hover, .sell-top:hover, .rent-top:hover, .invest-top:hover {
-    box-shadow: 0px 10px 20px rgba(0, 230, 165);
+    box-shadow: 0px 10px 20px skyblue;
     cursor: pointer;
     
 }
@@ -411,7 +448,7 @@ td a {
 .bottom-container,.bottom-container0, .bottom-container2 {
     /*width: 100%;*/
     
-    /*background: rgba(0, 230, 165);*/
+    /*background: skyblue;*/
     
     padding: 50px 0px;
     margin: 0rem 20rem;
@@ -419,7 +456,7 @@ td a {
 
 .bottom-container0 h1 {
     
-    color: rgba(0, 230, 165);
+    color: skyblue;
     font-weight: 900;
     font-size: 1.5rem;
     
@@ -432,6 +469,9 @@ td a {
 
 
 
+
+
+
 .bottom-container0 p {
     font-size: 1rem;
     color: var(--secondary-color);
@@ -440,7 +480,7 @@ td a {
 .bottom-container2 h1{
    /* width: 100%;*/
     font-weight: bolder;
-    color: rgba(0, 230, 165);
+    color: skyblue;
     margin-bottom: 10px;
 }
 .bottom-container2 p {
@@ -452,7 +492,7 @@ td a {
 }
 
 .citiez {
-    background: rgba(0, 230, 165);
+    background: skyblue;
     border-radius: 30px;
     box-shadow: 0px 5px 10px #212121;
     outline: red 1px solid;
@@ -476,115 +516,207 @@ td a {
 
 
 /* Footer CSS */
-footer{
+footer a {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    background: skyblue;
     display: grid;
-    grid-template: repeat(1, 1fr) / repeat(6, 1fr);
-    border: 1px solid mediumspringgreen;
+    grid-template: repeat(1, 1fr) / repeat(4, 1fr);
+    padding: 20px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*new content  march 18*/
+.content-container {
+display: flex;
+}
+
+.side-pic {
+    outline: red;
+    width: 50%;
+}
+
+.side-pic img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.side-info {
+    display: grid;
+    grid-template: repeat(3) / repeat(1);
+    place-items: center;
+    background-color: rgba(135, 206, 235, 0.5);
+    width: 50%;
+    color: var(--secondary-color);
     
 }
 
-footer a{
-    color: var(--secondary-color);;
-    font-family: Questrial, "Times New Roman", sans-serif;
-    font-size: 1.2rem;
-    text-decoration: none;
-}   
-
-
-footer a:hover{
-    cursor: pointer;
-    color: rgba(0, 230, 165);
+.side-info p {
+    text-align: center;
+    font-size: 3rem;
+    
+    
 }
 
+.side-info button {
+    
+    font-size: 1.5rem;
+}
 
-.social-links {
+.get-started {
+    text-align: center;
+    line-height: 5rem;
+}
+
+.get-started strong {
+    color: blue;
+    
+}
+
+.grid-1 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    
     
 }
 
-
-
-
-
-
-.signup-form {
-    display: block;
-    line-height: 2rem;
-    padding: 5rem;
-    font-family: Questrial, "Times New Roman", sans-serif;
-    border: 4px solid mediumspringgreen;
-    border-radius: 30px;
-    margin-bottom: 2rem;
-}
-
-.login-form {
-    text-align: center;
-}
-
-
-
-form a {
-    color: blueviolet;
-    text-decoration: none;
-    font-weight: 900;
-}
-
-form a:hover {
-    text-decoration: underline;
-}
-
-/* form h1 {
-    text-align: center;
-    color: var(--secondary-color);;
-    margin-bottom: 30px;
-}
-
-form h4 {
-    margin-bottom: 5px;
-    color: var(--secondary-color);;
-} */
-
-form input, form select{
-    font-family: Questrial, "Times New Roman", sans-serif;
-    height: 30px;
-    border-radius: 4px; 
-} 
-
-form input:hover, form select:hover {
-    box-shadow: 0 0 10px var(--secondary-color);
-}
-
-.logo-login {
+.card svg {
+    height: 25px;
+  }
+  
+  .card {
+    position: relative;
     display: flex;
-    margin: auto;
-}
-
-.login-button:hover{
-   /* cursor: pointer;
-    border: 6px solid mediumspringgreen;*/
-    box-shadow: 0 0 10px var(--secondary-color);
-}
-
-label {
-    color: var(--secondary-color);;
-    font-weight: 900;
-}
-
-
-/* Styling for signup_page */
-
-form p {
-    font-size: 0.7em;
-    color: var(--secondary-color);;
-    margin: 10px 10px;
-    text-align: center;
-    line-height: 2px;
+    align-items: center;
+    justify-content: center;
+    background: #e7e7e7;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    height: 50px;
+    width: 200px;
+    border-radius: 7px;
     
-}
+  }
+  
+  .card::before, .card::after {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    transition: 0.25s linear;
+    z-index: 1;
+  }
+  
+  .card::before {
+    content: "";
+    left: 0;
+    justify-content: flex-end;
+    background-color: skyblue;
+  }
+  
+  .card::after {
+    content: "";
+    right: 0;
+    justify-content: flex-start;
+    background-color: blue;
+  }
+  
+  .card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  
+  .card:hover span {
+    opacity: 0;
+    z-index: -3;
+  }
+  
+  .card:hover::before {
+    opacity: 0.5;
+    transform: translateY(-100%);
+  }
+  
+  .card:hover::after {
+    opacity: 0.5;
+    transform: translateY(100%);
+  }
+  
+  .card span {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 1;
+    transition: opacity 0.25s;
+    z-index: 2;
+    
+  }
+  
+  .card .social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    color: whitesmoke;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.25s;
+  }
+  
+  .card .social-link svg {
+    text-shadow: 1px 1px rgba(31, 74, 121, 0.7);
+    transform: scale(1);
+  }
+  
+  .card .social-link:hover {
+    background-color: rgba(249, 244, 255, 0.774);
+    animation: bounce_613 0.4s linear;
+  }
+  
+  @keyframes bounce_613 {
+    40% {
+      transform: scale(1.4);
+    }
+  
+    60% {
+      transform: scale(0.8);
+    }
+  
+    80% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
 
-.signup-form p {
-    text-align: inherit;
-}
 
+ 

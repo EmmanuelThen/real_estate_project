@@ -12,3 +12,13 @@
     color: rgba(0, 230, 165);
     font-weight: bolder;
 }
+
+main {
+    padding: 100px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.main-input-table td, .main-input-table th, .main-input-table, .main-input-exp, .main-input-exp td, .main-input-exp th {
+    outline: 1px solid red;
+}
