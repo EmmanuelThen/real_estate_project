@@ -8,7 +8,7 @@
   <title>Thenterprise</title>
   <link rel="stylesheet" href="../css-files/index.css">
   <link rel="stylesheet" href="../css-files/calculators-style.css">
-  <link rel="stylesheet" href="../css-files/animations.css">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
@@ -24,139 +24,136 @@
 <body>
   <header>
     <div class="links-container">
-      <a class="home-logo-top" href="../html-files/index.html"><img src="../resources/logo.png" width="60" height="60"></a>
+      <a class="home-logo-top" href="../html-files/index.html"><img src="../resources/Thenterprise_main_logo.svg" width="60" height="60"></a>
       <a href="">Residential</a>
       <a href="">Commercial</a>
       <a href="">Forum</a>
       <a href="">Pricing</a>
-      <a href="">Free-Trial</a>
+      <a href="../html-files/calculators.html">Free-Trial</a>
     </div>
-    
     <nav>
-      
-          <button><a href="../html-files/login_page.html">Log in</a></button>
-          <button><a href="../html-files/signup_page.html">Sign up</a></button> 
-          <img src="../resources/darkmode.png" id="icon" width="25" height="25">
+      <button><a href="../html-files/login_page.html" id="login-btn">Log in</a></button>
+      <button><a href="../html-files/signup_page.html">Sign up</a></button>
+      <img src="../resources/darkmode.png" id="icon" width="25" height="25">
     </nav>
-    
-    
   </header>
   <main>
-    <div class="main-input-table">
-      <div class="sale-price">
-        <label for="sale-price">Sale Price : </label>
-        <input type="number" id="sale-price" min="0" placeholder="Enter Sale Price">
+    <div class="input-table-container">
+      <div class="main-input-table">
+
+
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <div class="sale-price">
+                  <label for="sale-price" id="exp-header">Sale Price</label>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="number" id="sale-price" min="0" placeholder="Enter Sale Price"></td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <table>
+          <thead>
+            <tr>
+              <th id="exp-header">Total Rent/mo.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input id="monthly-rent" type="number" min="0" placeholder="Enter monthly rent"></td>
+            </tr>
+          </tbody>
+        </table>
+        
+
+
       </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Unit #</th>
-            <th>Number of beds</th>
-            <th>Number of baths</th>
-            <th>Total Rent/mo.</th>
-            
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>101</td>
-            <td>2</td>
-            <td>1</td>
-            <td><input id="monthly-rent" type="number" min="0" placeholder="Enter monthly rent"></td>
-            
-          </tr>
-          
-          <tr>
-            <td>Totals</td>
-            <td></td>
-            <td></td>
-            <td><output id="rents-total"></output></td>
-            
-          </tr>
-        </tbody>
-      </table>
-      <h3>Populate more rows(when clicked on more rows will populate as needed)</h3>
-    </div>
-
-    <div class="main-input-exp">
-      <table>
-        <thead>
-          <tr>Expenses</tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <label for="prop-tax">Property Tax Per Year :</label>
-              <input type="number" id="prop-tax" min="0" placeholder="Enter Property Tax">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="prop-ins">Insurance Per Month :</label>
-              <input type="number" id="prop-ins" min="0" placeholder="Enter Insurance">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="prop-utilities">Utilities Per Month :</label>
-              <input type="number" id="prop-utilities" min="0" placeholder="Enter Utilities">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="prop-mngmt">Property Management (%) :</label>
-              <input type="number" id="prop-mngmt" min="0" placeholder="Enter Management">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="prop-vacancy">Vacancy (%) :</label>
-              <input type="number" id="prop-vacancy" min="0" placeholder="Enter Vacancy">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="prop-maintenance">Maintenance (%) :</label>
-              <input type="number" id="prop-maintenance" min="0" placeholder="Enter Maintenance">
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="main-input-exp">
-      <table>
-        <thead>
-          <tr>Mortgage</tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <label for="prop-dp">Downpayment (%) :</label>
-              <input type="number" id="prop-dp" min="0" placeholder="Enter Downpayment">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="prop-int">Interest Rate (%) :</label>
-              <input type="number" id="prop-int" min="0" placeholder="Enter Interest Rate">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="prop-loan">Loan Term (Years) :</label>
-              <input type="number" id="prop-loan" min="0" placeholder="Enter Loan Term">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="prop-closing">Closing Cost :</label>
-              <input type="number" id="prop-closing" min="0" placeholder="Enter Closing Cost">
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="main-input-exp">
+        <table>
+          <thead>
+            <td id="exp-header">Expenses</td>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label for="prop-tax">Property Tax Per Year</label>
+                <input type="number" id="prop-tax" min="0" placeholder="Enter Property Tax">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="prop-ins">Insurance Per Month</label>
+                <input type="number" id="prop-ins" min="0" placeholder="Enter Insurance">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="prop-utilities">Utilities Per Month</label>
+                <input type="number" id="prop-utilities" min="0" placeholder="Enter Utilities">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="prop-mngmt">Property Management (%) </label>
+                <input type="number" id="prop-mngmt" min="0" placeholder="Enter Management">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="prop-vacancy">Vacancy (%)</label>
+                <input type="number" id="prop-vacancy" min="0" placeholder="Enter Vacancy">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="prop-maintenance">Maintenance (%)</label>
+                <input type="number" id="prop-maintenance" min="0" placeholder="Enter Maintenance">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="main-input-exp">
+        <table>
+          <thead>
+            <td id="exp-header">Mortgage</td>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label for="prop-dp">Downpayment (%) </label>
+                <input type="number" id="prop-dp" min="0" placeholder="Enter Downpayment">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="prop-int">Interest Rate (%) </label>
+                <input type="number" id="prop-int" min="0" placeholder="Enter Interest Rate">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="prop-loan">Loan Term (Years) </label>
+                <input type="number" id="prop-loan" min="0" placeholder="Enter Loan Term">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="prop-closing">Closing Cost </label>
+                <input type="number" id="prop-closing" min="0" placeholder="Enter Closing Cost">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <!-- <div class="cap-rate-calc">
@@ -175,119 +172,209 @@
       </div>
     </div> -->
 
-    <div class="NOI-calc">
-      <h1>Pro Forma Analysis</h1>
-      <div>
-        <label for="gross-rent">Gross Rent:</label>
-        <output id="gross-rent"></output> 
-      </div>
-      <div class="operating-expenses">
-        <div>
-          <label for="exp-1">Property Management:</label>
-          <output id="exp-1"></output>
-        </div>
-        
-        <div>
-          <label for="exp-2">Property Taxes:</label>
-          <output id="exp-2"></output>
-        </div>
-
-        <div>
-          <label for="exp-3">Vacany Reserves:</label>
-          <output id="exp-3"></output>
-        </div>
-
-        <div>
-          <label for="exp-4">Maintenance Reserves:</label>
-          <output id="exp-4"></output>
-        </div>
-
-        <div>
-          <label for="exp-5">Insurance:</label>
-          <output id="exp-5"></output>
-        </div>
-
-        <div>
-          <label for="exp-6">Utilities:</label>
-          <output id="exp-6"></output>
-        </div>
-
-      </div>
-      <div>  
-        <label for="total-Opex">Total Operating Expenses:</label>
-        <output id="total-Opex"></output>
-      </div>
-      <div>  
-        <label for="noi-monthly">Monthly NOI:</label>
-        <output id="noi-monthly"></output>
-      </div>
-      <div>  
-        <label for="noi-annual">Annual NOI:</label>
-        <output id="noi-annual"></output>
-      </div>
-      <div>
-        <label for="cap-rate">Capitalization Rate:</label>
-        <output id="cap-rate"></output>
+    <div class="NOI-calc-container">
+      <div class="NOI-calc">
+        <table>
+          <thead>
+            <h1>Pro Forma Analysis</h1>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+      
+                  <label for="gross-rent">Gross Rent:</label>
+                  <output id="gross-rent"></output>
+      
+              </td>
+            </tr>
+      
+            <div class="operating-expenses">
+              <tr>
+                <td>
+      
+                    <label for="exp-1">Property Management:</label>
+                    <output id="exp-1"></output>
+      
+                </td>
+              </tr>
+      
+              <tr>
+                <td>
+      
+                    <label for="exp-2">Property Taxes:</label>
+                    <output id="exp-2"></output>
+      
+                </td>
+              </tr>
+              <tr>
+                <td>
+      
+                    <label for="exp-3">Vacany Reserves:</label>
+                    <output id="exp-3"></output>
+      
+                </td>
+              </tr>
+              <tr>
+                <td>
+      
+                    <label for="exp-4">Maintenance Reserves:</label>
+                    <output id="exp-4"></output>
+      
+                </td>
+              </tr>
+              <tr>
+                <td>
+      
+                    <label for="exp-5">Insurance:</label>
+                    <output id="exp-5"></output>
+      
+                </td>
+              </tr>
+              <tr>
+                <td>
+      
+                    <label for="exp-6">Utilities:</label>
+                    <output id="exp-6"></output>
+      
+                </td>
+              </tr>
+            </div>
+            <tr>
+              <td>
+      
+                  <label for="total-Opex">Total Operating Expenses:</label>
+                  <output id="total-Opex"></output>
+      
+              </td>
+            </tr>
+            <tr>
+              <td>
+      
+                  <label for="noi-monthly">Monthly NOI:</label>
+                  <output id="noi-monthly"></output>
+      
+              </td>
+            </tr>
+            <tr>
+              <td>
+      
+                  <label for="noi-annual">Annual NOI:</label>
+                  <output id="noi-annual"></output>
+      
+              </td>
+            </tr>
+            <tr>
+              <td>
+      
+                  <label for="cap-rate">Capitalization Rate:</label>
+                  <output id="cap-rate"></output>
+      
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
     
 
-    <div class="mortgage-calc">
-      <h1>Mortgage Calculator</h1>
-      <div>
-        <label for="sale-price2">Sale Price :</label>
-        <output id="sale-price2"></output>
-      </div>
-
-      <div>
-        <label for="down-pmt">Down Payment :</label>
-        <output id="down-pmt"></output>
-      </div>
-
-      <div>
-        <label for="closing-cost">Closing Cost :</label>:</label>
-        <output id="closing-cost"></output>
-      </div>
-
-      <div>
-        <label for="ltv-ratio">Loan-to-value Ratio :</label>
-        <output id="ltv-ratio"></output>
-      </div>
-
-      <div>
-        <label for="principal">Principal :</label>
-        <output id="principal"></output>
-      </div>
-
-      <div>
-        <label for="int">Interest Rate :</label>
-        <output id="int"></output>
-      </div>
-
-      <div>
-        <label for="loan-term">Loan Term (In Years) :</label>
-        <output id="loan-term"></output>
-      </div>
-
-      <div>
-        <label for="monthly-mortgage">Monthly Mortgage :</label>
-        <output id="monthly-mortgage"></output>
-      </div>
-
-      <div>
-        <label for="monthly-profit">Monthly Net Profit :</label>
-        <output id="monthly-profit"></output>
-      </div>
-
-      <div>
-        <label for="annual-profit">Annual Net Profit :</label>
-        <output id="annual-profit"></output>
-      </div>
-
-      <div>
-        <label for="annual-ROI">Annual ROI :</label>
-        <output id="annual-ROI"></output>
+    <div class="mortgage-calc-container">
+      <div class="mortgage-calc">
+        <table>
+          <thead>
+            <h1>Mortgage Calculator</h1>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div>
+                  <label for="sale-price2">Sale Price :</label>
+                  <output id="sale-price2"></output>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <label for="down-pmt">Down Payment :</label>
+                  <output id="down-pmt"></output>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <label for="closing-cost">Closing Cost :</label>:</label>
+                  <output id="closing-cost"></output>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <label for="ltv-ratio">Loan-to-value Ratio :</label>
+                  <output id="ltv-ratio"></output>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <label for="principal">Principal :</label>
+                  <output id="principal"></output>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <label for="int">Interest Rate :</label>
+                  <output id="int"></output>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <label for="loan-term">Loan Term (In Years) :</label>
+                  <output id="loan-term"></output>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <label for="monthly-mortgage">Monthly Mortgage :</label>
+                  <output id="monthly-mortgage"></output>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <label for="monthly-profit">Monthly Net Profit :</label>
+                  <output id="monthly-profit"></output>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <label for="annual-profit">Annual Net Profit :</label>
+                  <output id="annual-profit"></output>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <label for="annual-ROI">Annual ROI :</label>
+                  <output id="annual-ROI"></output>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 

@@ -41,16 +41,16 @@ body {
     --secondary-color: #fff;
 }  
 
-main {
-    /*display: grid;
+/*main {
+    display: grid;
     min-height: 100vh;
     font-family: Questrial, "Times New Roman", sans-serif;
     place-items: center;
     overflow:  hidden;
     margin: 0;
-    /*background-color: */
-    /*font-size: 0.75rem;*/
-}
+    background-color: 
+    font-size: 0.75rem;
+}*/
 
 /* CSS for Header */
 header {
@@ -546,10 +546,11 @@ footer a {
 /*new content  march 18*/
 .content-container {
 display: flex;
+
 }
 
 .side-pic {
-    outline: red;
+    
     width: 50%;
 }
 
@@ -588,7 +589,7 @@ display: flex;
 }
 
 .get-started strong {
-    color: blue;
+    color: rgb(30, 30, 185);;
     
 }
 
@@ -639,7 +640,7 @@ display: flex;
     content: "";
     right: 0;
     justify-content: flex-start;
-    background-color: blue;
+    background-color: skyblue;
   }
   
   .card:hover {
@@ -668,7 +669,7 @@ display: flex;
     justify-content: center;
     width: 100%;
     height: 100%;
-    color: whitesmoke;
+    color: #212121;
     font-size: 1.5rem;
     font-weight: 700;
     opacity: 1;

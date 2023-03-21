@@ -240,13 +240,14 @@ function calculateMortgageCalculator() {
     const annualizedRoiCalc = annualizedNetCalc / (downPaymentCalc + closingCostCalc) * 100;
 
     //Format Outputs
-    const formattedSalePrice = formatNumber(salePrice);
-    const formattedDownPayment = formatNumber(downPaymentCalc);
-    const formattedPrincipal = formatNumber(principalCalc);
-    const formattedMonthlyMortgage = formatNumber(monthlyMortgageCalc);
-    const formattedMonthlyNet = formatNumber(monthlyNetCalc);
-    const formattedAnnualizedNet = formatNumber(annualizedNetCalc);
+    const formattedSalePrice = isNaN(salePrice) ? '$0.00' : formatNumber(salePrice);
+    const formattedDownPayment = isNaN(downPaymentCalc) ? '$0.00' : formatNumber(downPaymentCalc);
+    const formattedPrincipal = isNaN(principalCalc) ? '$0.00' : formatNumber(principalCalc);
+    const formattedMonthlyMortgage = isNaN(monthlyMortgageCalc) ? '$0.00' : formatNumber(monthlyMortgageCalc);
+    const formattedMonthlyNet = isNaN(monthlyNetCalc) ? '$0.00' : formatNumber(monthlyNetCalc);
+    const formattedAnnualizedNet = isNaN(annualizedNetCalc) ? '$0.00' : formatNumber(annualizedNetCalc);
     const formattedClosingCost = formatNumber(closingCostCalc);
+    const formattedannualRoi = isNaN(annualizedRoiCalc) ? '0%' : annualizedRoiCalc;
  
     //Update Output Fields
     salePriceOutput.textContent = `${formattedSalePrice}`;
@@ -259,7 +260,10 @@ function calculateMortgageCalculator() {
     monthlyMortgageOutput.textContent = `${formattedMonthlyMortgage}`;
     monthlyProfitOutput.textContent = `${formattedMonthlyNet}`;
     annualProfitOutput.textContent = `${formattedAnnualizedNet}`;
-    annualROIOutput.textContent = `${annualizedRoiCalc.toFixed(2)}%`;
+    annualROIOutput.textContent = `${formattedannualRoi.toFixed(2)}%`;
+
+    //To Remove NaN From Output While Calculating
+    
 };
 
 
