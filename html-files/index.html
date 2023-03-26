@@ -6,8 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thenterprise</title>
-  <link rel="stylesheet" href="../css-files/index.css">
-  <link rel="stylesheet" href="../css-files/animations.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
@@ -16,45 +14,560 @@
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa&family=Questrial&display=swap" rel="stylesheet">
   <script type="module" src="../javascript-files/index.js" async></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/main.min.css">
+  
+  <link rel="stylesheet" href="../css-files/index.css">
+  <link rel="stylesheet" href="../css-files/animations.css">
+  
 </head>
 
 <body>
-  
-  <header>
-    <div class="links-container">
-      <a class="home-logo-top" href="../html-files/index.html"><img src="../resources/Thenterprise_main_logo.svg" width="60" height="60"></a>
-      <a href="">Residential</a>
-      <a href="">Commercial</a>
-      <a href="">Forum</a>
-      <a href="">Pricing</a>
-      <a href="../html-files/calculators.html">Free-Trial</a>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../html-files/index.html"><img src="../resources/Thenterprise_main_logo.svg"  width="50" height="50" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon ">
+          <div class="switch bg-secondary">
+          <input type="checkbox">
+          <div>
+              <span class="line-1"></span>
+              <span class="line-2"></span>
+              <span class="line-3"></span>
+          </div>
+          </div>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Buy
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sell
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Rent
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Free-trial
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../html-files/calculators.html">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+
+
+        <div id="nav-account">
+            <span type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#loginModal" id="nav-login">Log In</span>
+            
+            <span type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal" id="nav-signup">Sign Up</span>
+        </div>
+
+        
+        
+      </div>
     </div>
-    <nav>
-      <button><a href="../html-files/login_page.html" id="login-btn">Log in</a></button>
-      <button><a href="../html-files/signup_page.html">Sign up</a></button>
-      <img src="../resources/darkmode.png" id="icon" width="25" height="25">
-    </nav>
-  </header>
+  </nav>
+
   
-  
+
+  <!--Login Modal-->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true"">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-evenly">
+        
+        <div class="title_container d-flex justify-content-center mb-3">
+          <p class="title">Login to your Account</p>
+          <span class="subtitle">Lets get started, fill in your credentials below and enjoy the experience.</span>
+        </div>
+        
+        <div type="button" class="btn-close ms-1" data-bs-dismiss="modal" aria-label="Close" id="modal-close"></div>
+      </div>
+      <div class="modal-body">
+        <form action="" id="login-modal-form">
+          <div class="input_container">
+            <label class="input_label" for="email_field">Email</label>
+            <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg" class="icon">
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#141B34" d="M7 8.5L9.94202 10.2394C11.6572 11.2535 12.3428 11.2535 14.058 10.2394L17 8.5"></path>
+              <path stroke-linejoin="round" stroke-width="1.5" stroke="#141B34" d="M2.01577 13.4756C2.08114 16.5412 2.11383 18.0739 3.24496 19.2094C4.37608 20.3448 5.95033 20.3843 9.09883 20.4634C11.0393 20.5122 12.9607 20.5122 14.9012 20.4634C18.0497 20.3843 19.6239 20.3448 20.7551 19.2094C21.8862 18.0739 21.9189 16.5412 21.9842 13.4756C22.0053 12.4899 22.0053 11.5101 21.9842 10.5244C21.9189 7.45886 21.8862 5.92609 20.7551 4.79066C19.6239 3.65523 18.0497 3.61568 14.9012 3.53657C12.9607 3.48781 11.0393 3.48781 9.09882 3.53656C5.95033 3.61566 4.37608 3.65521 3.24495 4.79065C2.11382 5.92608 2.08114 7.45885 2.01576 10.5244C1.99474 11.5101 1.99475 12.4899 2.01577 13.4756Z"></path>
+            </svg>
+            <input placeholder="Enter email" title="Inpit title" name="input-name" type="text" class="input_field" id="email_field" required>
+          </div>
+          <br>
+          <div class="input_container">
+            <label class="input_label" for="password_field">Password</label>
+            <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg" class="icon">
+              <path stroke-linecap="round" stroke-width="1.5" stroke="#141B34" d="M18 11.0041C17.4166 9.91704 16.273 9.15775 14.9519 9.0993C13.477 9.03404 11.9788 9 10.329 9C8.67911 9 7.18091 9.03404 5.70604 9.0993C3.95328 9.17685 2.51295 10.4881 2.27882 12.1618C2.12602 13.2541 2 14.3734 2 15.5134C2 16.6534 2.12602 17.7727 2.27882 18.865C2.51295 20.5387 3.95328 21.8499 5.70604 21.9275C6.42013 21.9591 7.26041 21.9834 8 22"></path>
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#141B34" d="M6 9V6.5C6 4.01472 8.01472 2 10.5 2C12.9853 2 15 4.01472 15 6.5V9"></path>
+              <path fill="#141B34" d="M21.2046 15.1045L20.6242 15.6956V15.6956L21.2046 15.1045ZM21.4196 16.4767C21.7461 16.7972 22.2706 16.7924 22.5911 16.466C22.9116 16.1395 22.9068 15.615 22.5804 15.2945L21.4196 16.4767ZM18.0228 15.1045L17.4424 14.5134V14.5134L18.0228 15.1045ZM18.2379 18.0387C18.5643 18.3593 19.0888 18.3545 19.4094 18.028C19.7299 17.7016 19.7251 17.1771 19.3987 16.8565L18.2379 18.0387ZM14.2603 20.7619C13.7039 21.3082 12.7957 21.3082 12.2394 20.7619L11.0786 21.9441C12.2794 23.1232 14.2202 23.1232 15.4211 21.9441L14.2603 20.7619ZM12.2394 20.7619C11.6914 20.2239 11.6914 19.358 12.2394 18.82L11.0786 17.6378C9.86927 18.8252 9.86927 20.7567 11.0786 21.9441L12.2394 20.7619ZM12.2394 18.82C12.7957 18.2737 13.7039 18.2737 14.2603 18.82L15.4211 17.6378C14.2202 16.4587 12.2794 16.4587 11.0786 17.6378L12.2394 18.82ZM14.2603 18.82C14.8082 19.358 14.8082 20.2239 14.2603 20.7619L15.4211 21.9441C16.6304 20.7567 16.6304 18.8252 15.4211 17.6378L14.2603 18.82ZM20.6242 15.6956L21.4196 16.4767L22.5804 15.2945L21.785 14.5134L20.6242 15.6956ZM15.4211 18.82L17.8078 16.4767L16.647 15.2944L14.2603 17.6377L15.4211 18.82ZM17.8078 16.4767L18.6032 15.6956L17.4424 14.5134L16.647 15.2945L17.8078 16.4767ZM16.647 16.4767L18.2379 18.0387L19.3987 16.8565L17.8078 15.2945L16.647 16.4767ZM21.785 14.5134C21.4266 14.1616 21.0998 13.8383 20.7993 13.6131C20.4791 13.3732 20.096 13.1716 19.6137 13.1716V14.8284C19.6145 14.8284 19.619 14.8273 19.6395 14.8357C19.6663 14.8466 19.7183 14.8735 19.806 14.9391C19.9969 15.0822 20.2326 15.3112 20.6242 15.6956L21.785 14.5134ZM18.6032 15.6956C18.9948 15.3112 19.2305 15.0822 19.4215 14.9391C19.5091 14.8735 19.5611 14.8466 19.5879 14.8357C19.6084 14.8273 19.6129 14.8284 19.6137 14.8284V13.1716C19.1314 13.1716 18.7483 13.3732 18.4281 13.6131C18.1276 13.8383 17.8008 14.1616 17.4424 14.5134L18.6032 15.6956Z"></path>
+            </svg>
+            <input placeholder="Enter password" title="Inpit title" name="input-name" type="password" class="input_field" id="password_field" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W_]).{8,}$" required>
+          </div>
+          <br>
+          <p><a href="#" data-bs-toggle="tooltip" title="Change password">Forgot Password</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
+          <br>
+          <button title="Sign In" type="submit" class="sign-in_btn">
+            <span>Sign In</span>
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="separator">
+          <hr class="line">
+          <span>Or</span>
+          <hr class="line">
+        </div>
+        <button title="Sign In" type="submit" class="sign-in_ggl">
+          <svg height="20px" width="20px" viewBox="0 0 48 48" preserveAspectRatio="xMinYMin meet" focusable="false" aria-hidden="true"><title>Google Logo</title><clipPath id="g"><path d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"></path></clipPath><g class="colors" clip-path="url(#g)"><path fill="#FBBC05" d="M0 37V11l17 13z"></path><path fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"></path><path fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"></path><path fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"></path></g></svg>
+          <span>Continue with Google</span>
+        </button>
+        <button title="Sign In" type="submit" class="sign-in_apl">
+          <svg preserveAspectRatio="xMidYMid" version="1.1" viewBox="0 0 256 315" height="20px" width="16px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path fill="#ffffff" d="M213.803394,167.030943 C214.2452,214.609646 255.542482,230.442639 256,230.644727 C255.650812,231.761357 249.401383,253.208293 234.24263,275.361446 C221.138555,294.513969 207.538253,313.596333 186.113759,313.991545 C165.062051,314.379442 158.292752,301.507828 134.22469,301.507828 C110.163898,301.507828 102.642899,313.596301 82.7151126,314.379442 C62.0350407,315.16201 46.2873831,293.668525 33.0744079,274.586162 C6.07529317,235.552544 -14.5576169,164.286328 13.147166,116.18047 C26.9103111,92.2909053 51.5060917,77.1630356 78.2026125,76.7751096 C98.5099145,76.3877456 117.677594,90.4371851 130.091705,90.4371851 C142.497945,90.4371851 165.790755,73.5415029 190.277627,76.0228474 C200.528668,76.4495055 229.303509,80.1636878 247.780625,107.209389 C246.291825,108.132333 213.44635,127.253405 213.803394,167.030988 M174.239142,50.1987033 C185.218331,36.9088319 192.607958,18.4081019 190.591988,0 C174.766312,0.636050225 155.629514,10.5457909 144.278109,23.8283506 C134.10507,35.5906758 125.195775,54.4170275 127.599657,72.4607932 C145.239231,73.8255433 163.259413,63.4970262 174.239142,50.1987249"></path>
+            </g>
+          </svg>
+          <span>Continue with Apple</span>
+        </button>
+        <a href="#" class="note">Terms of use &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Sign up Modal-->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true"">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-evenly">
+        
+        <div class="title_container d-flex justify-content-center mb-3">
+          <p class="title">Create An Account</p>
+          <span class="subtitle">Lets get started, fill in your credentials below and enjoy the experience.</span>
+        </div>
+        
+        <div type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close" id="modal-close"></div>
+      </div>
+      <div class="modal-body">
+        <form action="" id="signup-modal-form">
+          <div class="input_container">
+            <label class="input_label" for="email_field">Email</label>
+            <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg" class="icon">
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#141B34" d="M7 8.5L9.94202 10.2394C11.6572 11.2535 12.3428 11.2535 14.058 10.2394L17 8.5"></path>
+              <path stroke-linejoin="round" stroke-width="1.5" stroke="#141B34" d="M2.01577 13.4756C2.08114 16.5412 2.11383 18.0739 3.24496 19.2094C4.37608 20.3448 5.95033 20.3843 9.09883 20.4634C11.0393 20.5122 12.9607 20.5122 14.9012 20.4634C18.0497 20.3843 19.6239 20.3448 20.7551 19.2094C21.8862 18.0739 21.9189 16.5412 21.9842 13.4756C22.0053 12.4899 22.0053 11.5101 21.9842 10.5244C21.9189 7.45886 21.8862 5.92609 20.7551 4.79066C19.6239 3.65523 18.0497 3.61568 14.9012 3.53657C12.9607 3.48781 11.0393 3.48781 9.09882 3.53656C5.95033 3.61566 4.37608 3.65521 3.24495 4.79065C2.11382 5.92608 2.08114 7.45885 2.01576 10.5244C1.99474 11.5101 1.99475 12.4899 2.01577 13.4756Z"></path>
+            </svg>
+            <input placeholder="Enter email" title="Inpit title" name="input-name" type="text" class="input_field" id="email_field" required>
+          </div>
+          <br>
+          <div class="input_container">
+            <label class="input_label" for="password_field">Password</label>
+            <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg" class="icon">
+              <path stroke-linecap="round" stroke-width="1.5" stroke="#141B34" d="M18 11.0041C17.4166 9.91704 16.273 9.15775 14.9519 9.0993C13.477 9.03404 11.9788 9 10.329 9C8.67911 9 7.18091 9.03404 5.70604 9.0993C3.95328 9.17685 2.51295 10.4881 2.27882 12.1618C2.12602 13.2541 2 14.3734 2 15.5134C2 16.6534 2.12602 17.7727 2.27882 18.865C2.51295 20.5387 3.95328 21.8499 5.70604 21.9275C6.42013 21.9591 7.26041 21.9834 8 22"></path>
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#141B34" d="M6 9V6.5C6 4.01472 8.01472 2 10.5 2C12.9853 2 15 4.01472 15 6.5V9"></path>
+              <path fill="#141B34" d="M21.2046 15.1045L20.6242 15.6956V15.6956L21.2046 15.1045ZM21.4196 16.4767C21.7461 16.7972 22.2706 16.7924 22.5911 16.466C22.9116 16.1395 22.9068 15.615 22.5804 15.2945L21.4196 16.4767ZM18.0228 15.1045L17.4424 14.5134V14.5134L18.0228 15.1045ZM18.2379 18.0387C18.5643 18.3593 19.0888 18.3545 19.4094 18.028C19.7299 17.7016 19.7251 17.1771 19.3987 16.8565L18.2379 18.0387ZM14.2603 20.7619C13.7039 21.3082 12.7957 21.3082 12.2394 20.7619L11.0786 21.9441C12.2794 23.1232 14.2202 23.1232 15.4211 21.9441L14.2603 20.7619ZM12.2394 20.7619C11.6914 20.2239 11.6914 19.358 12.2394 18.82L11.0786 17.6378C9.86927 18.8252 9.86927 20.7567 11.0786 21.9441L12.2394 20.7619ZM12.2394 18.82C12.7957 18.2737 13.7039 18.2737 14.2603 18.82L15.4211 17.6378C14.2202 16.4587 12.2794 16.4587 11.0786 17.6378L12.2394 18.82ZM14.2603 18.82C14.8082 19.358 14.8082 20.2239 14.2603 20.7619L15.4211 21.9441C16.6304 20.7567 16.6304 18.8252 15.4211 17.6378L14.2603 18.82ZM20.6242 15.6956L21.4196 16.4767L22.5804 15.2945L21.785 14.5134L20.6242 15.6956ZM15.4211 18.82L17.8078 16.4767L16.647 15.2944L14.2603 17.6377L15.4211 18.82ZM17.8078 16.4767L18.6032 15.6956L17.4424 14.5134L16.647 15.2945L17.8078 16.4767ZM16.647 16.4767L18.2379 18.0387L19.3987 16.8565L17.8078 15.2945L16.647 16.4767ZM21.785 14.5134C21.4266 14.1616 21.0998 13.8383 20.7993 13.6131C20.4791 13.3732 20.096 13.1716 19.6137 13.1716V14.8284C19.6145 14.8284 19.619 14.8273 19.6395 14.8357C19.6663 14.8466 19.7183 14.8735 19.806 14.9391C19.9969 15.0822 20.2326 15.3112 20.6242 15.6956L21.785 14.5134ZM18.6032 15.6956C18.9948 15.3112 19.2305 15.0822 19.4215 14.9391C19.5091 14.8735 19.5611 14.8466 19.5879 14.8357C19.6084 14.8273 19.6129 14.8284 19.6137 14.8284V13.1716C19.1314 13.1716 18.7483 13.3732 18.4281 13.6131C18.1276 13.8383 17.8008 14.1616 17.4424 14.5134L18.6032 15.6956Z"></path>
+            </svg>
+            <input placeholder="Enter password" title="Inpit title" name="input-name" type="password" class="input_field" id="password_field" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W_]).{8,}$" required>
+          </div>
+        
+          <div class="password-requirements">
+            <div class="req">
+                <p>At least 8 characters</p>
+                <p>Both letter and numbers</p>
+                <p>At least one special character</p>
+            </div>
+          </div>
+          <div class="input_container">
+            <label class="input_label" for="password_field"> Confirm Password</label>
+            <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg" class="icon">
+              <path stroke-linecap="round" stroke-width="1.5" stroke="#141B34" d="M18 11.0041C17.4166 9.91704 16.273 9.15775 14.9519 9.0993C13.477 9.03404 11.9788 9 10.329 9C8.67911 9 7.18091 9.03404 5.70604 9.0993C3.95328 9.17685 2.51295 10.4881 2.27882 12.1618C2.12602 13.2541 2 14.3734 2 15.5134C2 16.6534 2.12602 17.7727 2.27882 18.865C2.51295 20.5387 3.95328 21.8499 5.70604 21.9275C6.42013 21.9591 7.26041 21.9834 8 22"></path>
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#141B34" d="M6 9V6.5C6 4.01472 8.01472 2 10.5 2C12.9853 2 15 4.01472 15 6.5V9"></path>
+              <path fill="#141B34" d="M21.2046 15.1045L20.6242 15.6956V15.6956L21.2046 15.1045ZM21.4196 16.4767C21.7461 16.7972 22.2706 16.7924 22.5911 16.466C22.9116 16.1395 22.9068 15.615 22.5804 15.2945L21.4196 16.4767ZM18.0228 15.1045L17.4424 14.5134V14.5134L18.0228 15.1045ZM18.2379 18.0387C18.5643 18.3593 19.0888 18.3545 19.4094 18.028C19.7299 17.7016 19.7251 17.1771 19.3987 16.8565L18.2379 18.0387ZM14.2603 20.7619C13.7039 21.3082 12.7957 21.3082 12.2394 20.7619L11.0786 21.9441C12.2794 23.1232 14.2202 23.1232 15.4211 21.9441L14.2603 20.7619ZM12.2394 20.7619C11.6914 20.2239 11.6914 19.358 12.2394 18.82L11.0786 17.6378C9.86927 18.8252 9.86927 20.7567 11.0786 21.9441L12.2394 20.7619ZM12.2394 18.82C12.7957 18.2737 13.7039 18.2737 14.2603 18.82L15.4211 17.6378C14.2202 16.4587 12.2794 16.4587 11.0786 17.6378L12.2394 18.82ZM14.2603 18.82C14.8082 19.358 14.8082 20.2239 14.2603 20.7619L15.4211 21.9441C16.6304 20.7567 16.6304 18.8252 15.4211 17.6378L14.2603 18.82ZM20.6242 15.6956L21.4196 16.4767L22.5804 15.2945L21.785 14.5134L20.6242 15.6956ZM15.4211 18.82L17.8078 16.4767L16.647 15.2944L14.2603 17.6377L15.4211 18.82ZM17.8078 16.4767L18.6032 15.6956L17.4424 14.5134L16.647 15.2945L17.8078 16.4767ZM16.647 16.4767L18.2379 18.0387L19.3987 16.8565L17.8078 15.2945L16.647 16.4767ZM21.785 14.5134C21.4266 14.1616 21.0998 13.8383 20.7993 13.6131C20.4791 13.3732 20.096 13.1716 19.6137 13.1716V14.8284C19.6145 14.8284 19.619 14.8273 19.6395 14.8357C19.6663 14.8466 19.7183 14.8735 19.806 14.9391C19.9969 15.0822 20.2326 15.3112 20.6242 15.6956L21.785 14.5134ZM18.6032 15.6956C18.9948 15.3112 19.2305 15.0822 19.4215 14.9391C19.5091 14.8735 19.5611 14.8466 19.5879 14.8357C19.6084 14.8273 19.6129 14.8284 19.6137 14.8284V13.1716C19.1314 13.1716 18.7483 13.3732 18.4281 13.6131C18.1276 13.8383 17.8008 14.1616 17.4424 14.5134L18.6032 15.6956Z"></path>
+            </svg>
+            <input placeholder=" Confirm password" title="Input title" name="input-name" type="password" class="input_field" id="password_field" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W_]).{8,}$" required>
+          </div>
+          <br>
+          <button title="Sign In" type="submit" class="sign-in_btn">
+            <span>Sign In</span>
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="separator">
+          <hr class="line">
+          <span>Or</span>
+          <hr class="line">
+        </div>
+        <button title="Sign In" type="submit" class="sign-in_ggl">
+          <svg height="20px" width="20px" viewBox="0 0 48 48" preserveAspectRatio="xMinYMin meet" focusable="false" aria-hidden="true"><title>Google Logo</title><clipPath id="g"><path d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"></path></clipPath><g class="colors" clip-path="url(#g)"><path fill="#FBBC05" d="M0 37V11l17 13z"></path><path fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"></path><path fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"></path><path fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"></path></g></svg>
+          <span>Continue with Google</span>
+        </button>
+        <button title="Sign In" type="submit" class="sign-in_apl">
+          <svg preserveAspectRatio="xMidYMid" version="1.1" viewBox="0 0 256 315" height="20px" width="16px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path fill="#ffffff" d="M213.803394,167.030943 C214.2452,214.609646 255.542482,230.442639 256,230.644727 C255.650812,231.761357 249.401383,253.208293 234.24263,275.361446 C221.138555,294.513969 207.538253,313.596333 186.113759,313.991545 C165.062051,314.379442 158.292752,301.507828 134.22469,301.507828 C110.163898,301.507828 102.642899,313.596301 82.7151126,314.379442 C62.0350407,315.16201 46.2873831,293.668525 33.0744079,274.586162 C6.07529317,235.552544 -14.5576169,164.286328 13.147166,116.18047 C26.9103111,92.2909053 51.5060917,77.1630356 78.2026125,76.7751096 C98.5099145,76.3877456 117.677594,90.4371851 130.091705,90.4371851 C142.497945,90.4371851 165.790755,73.5415029 190.277627,76.0228474 C200.528668,76.4495055 229.303509,80.1636878 247.780625,107.209389 C246.291825,108.132333 213.44635,127.253405 213.803394,167.030988 M174.239142,50.1987033 C185.218331,36.9088319 192.607958,18.4081019 190.591988,0 C174.766312,0.636050225 155.629514,10.5457909 144.278109,23.8283506 C134.10507,35.5906758 125.195775,54.4170275 127.599657,72.4607932 C145.239231,73.8255433 163.259413,63.4970262 174.239142,50.1987249"></path>
+            </g>
+          </svg>
+          <span>Continue with Apple</span>
+        </button>
+        <a href="#" class="note">Terms of use &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!--Showcase-->
+  <section class="bg-secondary text-light text-center">
+    <div class="container d-flex flex-column mb-3">
+      <div class=""><img src="../resources/Thenterprise_main_logo.svg" width="300" height="300" alt=""></div>
+      <div class="pb-5 border-radius-2xl">
+        <input class="border border-primary px-5 py-3 rounded-2" type="text" placeholder="Enter address, city or ZIP" id="search-bar-main">
+      </div>
+      <div class="p-2 pb-5"><button id="showcase-btn" class="bg-primary">Search</button></div>
+    </div>
+  </section>
+
+
+
     <!-- <img id="background-img" src="./resources/pexels-pixabay-358636.jpg"> -->
-    <div class="welcome-home">
+    <!--<div class="welcome-home">
      <div class="logo-welcome-home"> 
       <img src="../resources/Thenterprise_main_logo.svg" alt="" width="400" height="400">
      </div> 
       <div id="search-bar-container">
         <form class="search-bar" action="">
           <input type="text" name="search-bar" id="search-bar" placeholder="Enter address, city or ZIP">
-          <button id="index-page-search">Search</button>
+          <button id="index-page-search" class="btn-bd-primary">Search</button>
         </form> 
       </div> 
-    </div>  
+    </div>  -->
 
 
     
     
   <main>
-      <div class="content-container">
+    <div id="welcome-home-container" class="mb-3">
+      <div class="container">
+        <div class="d-flex justify-content-center fs-1 fw-bolder">Welcome Home</div>
+        <div class="d-flex justify-content-center">
+          <hr class="" id="hr-row3">
+        </div>
+        <div class="d-flex justify-content-center fs-6">All things real estate, all in one place</div>
+      </div>
+      <div class="container text-center">
+        <div class="row p-5">
+          <button class="col border border-primary rounded-3 p-5 fs-4">
+            <div>Buy</div>
+            <div class="d-flex justify-content-center">
+              <img class="" src="../resources/undraw_buy_house_re_8xq7.svg" width="80" height="80" alt="">
+            </div>
+          </button>
+          <button class="col border border-primary rounded-3 p-5 fs-4">
+            <div>Sell</div>
+            <div class="d-flex justify-content-center">
+              <img class="" src="../resources/undraw_for_sale_re_egkk.svg" width="80" height="80" alt="">
+            </div>
+          </button>
+          <button class="col border border-primary rounded-3 p-5 fs-4">
+            <div>Rent</div>
+            <div class="d-flex justify-content-center">
+              <img class="" src="../resources/undraw_apartment_rent_o-0-ut.svg" width="80" height="80" alt="">
+            </div>
+          </button>
+          <button class="col border border-primary rounded-3 p-5 fs-4">
+            <div>Invest</div>
+            <div class="d-flex justify-content-center">
+              <img class="" src="../resources/undraw_visual_data_re_mxxo.svg" width="80" height="80" alt="">
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <h1 class="fw-bolder">Trending Homes Near You</h1>
+    </div>
+
+    <div class="d-flex justify-content-center mb-5">
+      <div id="scroll-container">
+        <div id="scroll-wrapper">
+          <div class= "cardzzzz" id="card">
+            <h1>Address</h1>
+            <img src="../resources/Thenterprise_main_logo.svg" width="200" height="200" alt="">
+            <h1>details</h1>
+          </div>
+          <div class= "cardzzzz" id="card">
+            <h1>Address</h1>
+            <img src="../resources/Thenterprise_main_logo.svg" width="200" height="200" alt="">
+            <h1>details</h1>
+          </div>
+          <div class= "cardzzzz" id="card">
+            <h1>Address</h1>
+            <img src="../resources/Thenterprise_main_logo.svg" width="200" height="200" alt="">
+            <h1>details</h1>
+          </div>
+          <div class= "cardzzzz" id="card">
+            <h1>Address</h1>
+            <img src="../resources/Thenterprise_main_logo.svg" width="200" height="200" alt="">
+            <h1>details</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="d-flex justify-content-center bg-info">
+      <div class="container text-center">
+        <div class="row xl">
+          <div class="col">
+            <h1 class="fw-bolder">Fulfill Your Investment Needs</h1>
+            <h1 class="fw-bolder">&amp;</h1> 
+            <h1 class="fw-bolder">Unlock New Opportunities</h1>
+            <div>
+              <img src="../resources/Elite-logo.svg" alt="" width="200" height="200">
+            </div>
+            <div class="d-flex justify-content-center">
+              <hr class="" id="hr-row3">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <p></p>
+        </div>
+        <div class="row">
+          <div class="col">
+            <img class="border border-2 border-dark rounded-3" src="../resources/portoflio-pic.jpg" alt="" width="350" height="250">
+            <div>
+              <h3 class="fw-bold text-primary mt-3">Personal Portfolio</h3>
+            </div>
+            <p class="text-center fw-bold">Our personal real estate portfolio is a comprehensive tool designed to help individuals manage and track their real estate investments</p>
+            <hr>
+            <ul class="text-start">
+              <li><strong class="text-primary">Property tracking:</strong> Users can input information on all their properties, including purchase price, current value, rental income, and any associated expenses. This feature provides an at-a-glance view of the user's entire real estate portfolio.</li>
+              <br>
+              <li><strong class="text-primary">Document storage:</strong> Users can upload and store important documents related to each property, such as lease agreements, property inspections, and tax documents.</li>
+              <br>
+              <li><strong class="text-primary">Reporting:</strong> The portfolio generates customized reports on the user's portfolio, including a summary of all properties, financial statements, and performance metrics.</li>
+              <br>
+              <li><strong class="text-primary">Goal setting:</strong> Users can set investment goals and track progress toward those goals within the portfolio.</li>
+            </ul>
+          </div>
+          <div class="col">
+            <img class="border border-2 border-dark rounded-3" src="../resources/calculator-stock-photo.jpg" alt="" width="350" height="250">
+            <div>
+              <h3 class="fw-bold text-primary mt-3">Investment Analysis</h3>
+            </div>
+            <p class="text-center fw-bold">Our Investment Analysis Tool offers a powerful set of features to help users evaluate the performance of their real estate investments. With just a few inputs, users can calculate important metrics such as:</p>
+            <hr>
+            <ul class="text-start">
+              <li><strong class="text-primary">Capitalization Rate</strong></li>
+              <br>
+              <li><strong class="text-primary">Return on Investment</strong></li>
+              <br>
+              <li><strong class="text-primary">Net Operating Income</strong></li>
+              <br>
+              <li><strong class="text-primary">5-Year Tax Deduction Summary</strong></li>
+              <br>
+              <li><strong class="text-primary">Average Annualized Appreciation</strong></li>
+              <br>
+              <li><strong>... And so much more!</strong></li>
+            </ul>
+          </div>
+          <div class="col">
+            <img class="border border-2 border-dark rounded-3" src="../resources/property-files.jpg" alt="" width="350" height="250">
+            <div>
+              <h3 class="fw-bold text-primary mt-3">Property History</h3>
+            </div>
+            <p class="text-center fw-bold">Our Property History Tool is an essential feature for real estate investors, homeowners, and buyers looking to gain insight into the history of a property.</p>
+            <hr>
+            <ul class="text-start">
+              <li><strong class="text-primary">Ownership History:</strong> Provides a comprehensive overview of the property's ownership history, including information on the previous owners, their contact information, and the dates they owned the property</li>
+              <br>
+              <li><strong class="text-primary">Sales History:</strong> Provides a detailed sales history of the property, including the dates of previous sales, the sale price, and any other relevant data points.</li>
+              <br>
+              <li><strong class="text-primary">Property Characteristics:</strong> Provides detailed information on the property's characteristics, including its size, zoning, and other important data points that can impact its value.</li>
+              <br>
+              <li><strong class="text-primary">Public Records:</strong> Access public records related to the property, including tax records, building permits, and other important documents.</li>
+              <br>
+              <li><strong class="text-primary">Neighborhood Data:</strong> Provides information about the property's neighborhood, including data on nearby schools, crime rates, and other important data points.</li>
+              <br>
+            </ul>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+
+
+    
+
+    <div class="d-flex justify-content-center p-2 bg-dark text-light">
+      
+        
+        <div>
+          <h1 class="text-center">All That and More!</h1>
+          <p class="text-light d-flex justify-content-start text-center" >Fulfill your investment needs and unlock new opportunities with all of our resources. Become an Elite Member today! </p>
+          <div class="d-flex justify-content-center">
+            <hr class="" id="hr-row3">
+          </div>
+          <div class="mb-3" id="tab-container">
+            <button id="tab tab--1">Monthly</button>
+            <button id="tab tab--2">Annual</button>
+            <div id="indicator"></div>
+          </div>
+          <div class="text-center d-flex justify-content-center">
+                <ul class="text-start">
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                      <rect fill="#0d6efd" rx="8" height="16" width="16"></rect>
+                      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                    </svg>
+                    <span>Access to all of our investment calculators</span>
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                      <rect fill="#0d6efd" rx="8" height="16" width="16"></rect>
+                      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                    </svg>
+                    <span>Rent analysis reports and key rent metrics</span>
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                      <rect fill="#0d6efd" rx="8" height="16" width="16"></rect>
+                      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                    </svg>
+                    <span>In depth investment property analysis</span>
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                      <rect fill="#0d6efd" rx="8" height="16" width="16"></rect>
+                      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                    </svg>
+                    <span>Property tax info</span>
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                      <rect fill="#0d6efd" rx="8" height="16" width="16"></rect>
+                      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                    </svg>
+                    <span>Personal portfolio</span>
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                      <rect fill="#0d6efd" rx="8" height="16" width="16"></rect>
+                      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                    </svg>
+                    <span>feature</span>
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                      <rect fill="#0d6efd" rx="8" height="16" width="16"></rect>
+                      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                    </svg>
+                    <span>Use E-mail automations to promote your products.</span>
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                      <rect fill="#0d6efd" rx="8" height="16" width="16"></rect>
+                      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                    </svg>
+                    <span>Use E-mail automations to promote your products.</span>
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                      <rect fill="#0d6efd" rx="8" height="16" width="16"></rect>
+                      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                    </svg>
+                    <span>Use E-mail automations to promote your products.</span>
+                  </li>
+                </ul>
+          </div>
+          <div id="modal--footer">
+            <label id="price" class="text-light"><sup>$</sup>39.99<sub class="text-light">/mo</sub></label>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal" id="upgrade-btn">Upgrade to ELITE</button>
+          </div>
+        </div>
+        
+      
+    </div>
+
+    <div class="d-flex justify-content-center bg-info">
+      <div class="container text-center">
+        <div class="row justify-content-md-center">
+          <div class="col mt-5">
+            <div>
+              <h1 class="fw-bolder">Thenterprise Mobile</h1>
+              <div class="d-flex justify-content-center">
+                <hr class="" id="hr-row3">
+              </div>
+              <p>Take us on the go with the Thenterprise mobile app</p>
+              <p>Coming soon!</p>
+            </div>
+            <div class="">
+              <span><img src="https://s.zillowstatic.com/pfs/static/google-play-badge.svg" alt=""></span>
+              <img src="../resources/iphone-mock.png" alt="" width="400" height="400">
+              <span><img src="https://s.zillowstatic.com/pfs/static/app-store-badge.svg" alt=""></span>
+            </div>
+          </div>
+          <div class="col-md-auto">
+              <div class="text-start fw-bold">
+                <p>Thenterprise mobile is the perfect tool for anyone looking to get sta</p>
+                <p>All of our great features all in your pocket!</p>
+                <p>Download today</p>
+                
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- <div class="content-container">
         <div class="side-pic">
           <img src="../resources/pexels-rodnae-productions-8293778.jpg" alt="">
         </div>
@@ -64,26 +577,40 @@
             <h1>Welcome Home</h1>
           </div>
           <div class="get-started">
-            <p>Home for all of your real estate needs. With Thenterprise you can <strong>buy</strong>, <strong>sell</strong>, <strong>rent</strong>, and <strong>invest</strong> all in one place.</p>
-            <button>Sign up</button>
+            <p class="text-primary">Home for all of your real estate needs.</p> 
+            <p class="text-primary">With Thenterprise you can <strong>Buy</strong>, <strong>Sell</strong>, <strong>Rent</strong>, and <strong>Invest</strong></p> 
+            <p class="text-primary">all in one place.</p>
+            <button id="side-info-button">Sign up</button>
+            
           </div>
-          <div class="card">
-            <span>Socials</span>
-            <a class="social-link" href="#">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 461.001 461.001" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#F61C0D;" d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728 c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137 C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607 c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"></path> </g> </g></svg>
-            </a>
-            <a class="social-link" href="#">
-              <svg fill="#000000" viewBox="0 0 512 512" id="icons" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M412.19,118.66a109.27,109.27,0,0,1-9.45-5.5,132.87,132.87,0,0,1-24.27-20.62c-18.1-20.71-24.86-41.72-27.35-56.43h.1C349.14,23.9,350,16,350.13,16H267.69V334.78c0,4.28,0,8.51-.18,12.69,0,.52-.05,1-.08,1.56,0,.23,0,.47-.05.71,0,.06,0,.12,0,.18a70,70,0,0,1-35.22,55.56,68.8,68.8,0,0,1-34.11,9c-38.41,0-69.54-31.32-69.54-70s31.13-70,69.54-70a68.9,68.9,0,0,1,21.41,3.39l.1-83.94a153.14,153.14,0,0,0-118,34.52,161.79,161.79,0,0,0-35.3,43.53c-3.48,6-16.61,30.11-18.2,69.24-1,22.21,5.67,45.22,8.85,54.73v.2c2,5.6,9.75,24.71,22.38,40.82A167.53,167.53,0,0,0,115,470.66v-.2l.2.2C155.11,497.78,199.36,496,199.36,496c7.66-.31,33.32,0,62.46-13.81,32.32-15.31,50.72-38.12,50.72-38.12a158.46,158.46,0,0,0,27.64-45.93c7.46-19.61,9.95-43.13,9.95-52.53V176.49c1,.6,14.32,9.41,14.32,9.41s19.19,12.3,49.13,20.31c21.48,5.7,50.42,6.9,50.42,6.9V131.27C453.86,132.37,433.27,129.17,412.19,118.66Z"></path></g></svg>
-            </a>
-            <a class="social-link" href="#">
-              <svg viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill="#5865F2" fill-rule="nonzero"> </path> </g> </g></svg>
-            </a>
-            <a class="social-link" href="#">
-              <svg fill="#000000" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M488.1 414.7V303.4L300.9 428l83.6 55.8zm254.1 137.7v-79.8l-59.8 39.9zM512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm278 533c0 1.1-.1 2.1-.2 3.1 0 .4-.1.7-.2 1a14.16 14.16 0 0 1-.8 3.2c-.2.6-.4 1.2-.6 1.7-.2.4-.4.8-.5 1.2-.3.5-.5 1.1-.8 1.6-.2.4-.4.7-.7 1.1-.3.5-.7 1-1 1.5-.3.4-.5.7-.8 1-.4.4-.8.9-1.2 1.3-.3.3-.6.6-1 .9-.4.4-.9.8-1.4 1.1-.4.3-.7.6-1.1.8-.1.1-.3.2-.4.3L525.2 786c-4 2.7-8.6 4-13.2 4-4.7 0-9.3-1.4-13.3-4L244.6 616.9c-.1-.1-.3-.2-.4-.3l-1.1-.8c-.5-.4-.9-.7-1.3-1.1-.3-.3-.6-.6-1-.9-.4-.4-.8-.8-1.2-1.3a7 7 0 0 1-.8-1c-.4-.5-.7-1-1-1.5-.2-.4-.5-.7-.7-1.1-.3-.5-.6-1.1-.8-1.6-.2-.4-.4-.8-.5-1.2-.2-.6-.4-1.2-.6-1.7-.1-.4-.3-.8-.4-1.2-.2-.7-.3-1.3-.4-2-.1-.3-.1-.7-.2-1-.1-1-.2-2.1-.2-3.1V427.9c0-1 .1-2.1.2-3.1.1-.3.1-.7.2-1a14.16 14.16 0 0 1 .8-3.2c.2-.6.4-1.2.6-1.7.2-.4.4-.8.5-1.2.2-.5.5-1.1.8-1.6.2-.4.4-.7.7-1.1.6-.9 1.2-1.7 1.8-2.5.4-.4.8-.9 1.2-1.3.3-.3.6-.6 1-.9.4-.4.9-.8 1.3-1.1.4-.3.7-.6 1.1-.8.1-.1.3-.2.4-.3L498.7 239c8-5.3 18.5-5.3 26.5 0l254.1 169.1c.1.1.3.2.4.3l1.1.8 1.4 1.1c.3.3.6.6 1 .9.4.4.8.8 1.2 1.3.7.8 1.3 1.6 1.8 2.5.2.4.5.7.7 1.1.3.5.6 1 .8 1.6.2.4.4.8.5 1.2.2.6.4 1.2.6 1.7.1.4.3.8.4 1.2.2.7.3 1.3.4 2 .1.3.1.7.2 1 .1 1 .2 2.1.2 3.1V597zm-254.1 13.3v111.3L723.1 597l-83.6-55.8zM281.8 472.6v79.8l59.8-39.9zM512 456.1l-84.5 56.4 84.5 56.4 84.5-56.4zM723.1 428L535.9 303.4v111.3l103.6 69.1zM384.5 541.2L300.9 597l187.2 124.6V610.3l-103.6-69.1z"></path> </g></svg>
-            </a>
+          <div class="social-container">
+            <button>
+              <svg viewBox="0 0 16 16" class="bi bi-twitter" fill="currentColor" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+              </svg>
+              <span>Twitter</span>
+            </button>
+            <button>
+              <svg viewBox="0 0 16 16" class="bi bi-twitter" fill="currentColor" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+              </svg>
+              <span>Instagram</span>
+            </button>
+            <button>
+              <svg viewBox="0 0 16 16" class="bi bi-twitter" fill="currentColor" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+              </svg>
+              <span>Discord</span>
+            </button>
+            <button>
+              <svg viewBox="0 0 16 16" class="bi bi-twitter" fill="currentColor" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+              </svg>
+              <span>TikTok</span>
+            </button>
           </div>
         </div>
-      </div>
+      </div>-->
     
     <!--<div class="mid-mid">
       <div class="bottom-container0">
@@ -136,108 +663,113 @@
 
 
 
-  <div class="grid-container-container"> 
+  <!--<div class="grid-container-container"> 
     
       <div class="grid-container hidden">
         <div class="city">
-            <div class="circle"></div>
-            <img src="../resources/Thenterprise_main_logo.svg" alt="Elite Logo">
+            
+            <img src="../resources/Elite-logo.svg" alt="Elite Logo">
+            <h1>Elite Members Get Even More</h1>
+            
+              <img src="../resources/mac-mockup.png" alt="">
             
         </div>
-        <h1>Elite Members Get Even More</h1>
-      </div>
-
-      <div class="elite-description hidden">
-      
-        <table id="index-table">
-          <tr>
-            <th id="free">Features</th>
-            <th id="free">Thenterprise</th>
-            <th>Thenterprise Elite</th>
-            
-          </tr>
-          
-          
-          
-            
-          
-          
-          <tr>
-            <td id="free">Property Search</td>
-            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
-            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
-          </tr>
-          
-          <tr>
-            <td id="free">Buy, Sell, Rent</td>
-            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
-            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
-          </tr>
-  
-          <tr>
-            <td id="free">Monthly Newsletter</td>
-            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
-            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
-          </tr>
-  
-          <tr>
-            <td>Feature</td>
-            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
-            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
-          </tr>
-  
-          <tr>
-            <td>Feature</td>
-            <td><i  id="xmark" class="fa-solid fa-circle-xmark"></i></td>
-            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
-          </tr>
-  
-          <tr>
-            <td>Feature</td>
-            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
-            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
-          </tr>
-  
-          <tr>
-            <td>Feature</td>
-            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
-            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
-          </tr>
-
-          <tr>
-            <td>Feature</td>
-            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
-            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
-          </tr>
-
-          <tr>
-            <td>Feature</td>
-            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
-            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
-          </tr>
-
-          <tr>
-            <td>Feature</td>
-            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
-            <td><i id="checkmark" class="fa-solid fa-circle-check"></i></td>
-          </tr>
-  
-          <tr>
-            <td></td>
-            <td><a href="../html-files/signup_page.html" class="table-price" id="free">FREE</a></td>
-            <td><a href="" class="table-price">$19.99/mo.</a></td>
-          </tr>
-  
-          <tr>
-            <td></td>
-            <td><button class="table-btn">Sign Up</button></td>
-            <td><button class="table-btn2">Purchase</button></td>
-          </tr>
-        </table>
+        
         
       </div>
+      
+
+      <div class="elite-description">
+      
+        <div id="modalz">
+          <form id="form">
+            <div id="banner"></div>
+            <span><img src="../resources/Elite-logo.svg" width="300" height="100" alt=""></span>
+            <label id="title">Elite Members Get Even More</label>
+            <p id="description">Fulfill your investment needs and unlock new opportunities with all of our resources. Become an Elite Member today! </p>
+            <div id="tab-container">
+              <button id="tab tab--1">Monthly</button>
+              <button id="tab tab--2">Annual</button>
+              <div id="indicator"></div>
+            </div>
+        
+            <div id="benefits">
+              <span>What we offer</span>
+              <ul>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                    <rect fill="blue" rx="8" height="16" width="16"></rect>
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                  </svg>
+                  <span>Access to all of our investment calculators</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                    <rect fill="blue" rx="8" height="16" width="16"></rect>
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                  </svg>
+                  <span>Rent analysis reports and key rent metrics powered by Rentometer</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                    <rect fill="blue" rx="8" height="16" width="16"></rect>
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                  </svg>
+                  <span>In depth investment property analysis</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                    <rect fill="blue" rx="8" height="16" width="16"></rect>
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                  </svg>
+                  <span>Property tax info</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                    <rect fill="blue" rx="8" height="16" width="16"></rect>
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                  </svg>
+                  <span>Personal portfolio</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                    <rect fill="blue" rx="8" height="16" width="16"></rect>
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                  </svg>
+                  <span></span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                    <rect fill="blue" rx="8" height="16" width="16"></rect>
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                  </svg>
+                  <span>Use E-mail automations to promote your products.</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                    <rect fill="blue" rx="8" height="16" width="16"></rect>
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                  </svg>
+                  <span>Use E-mail automations to promote your products.</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                    <rect fill="blue" rx="8" height="16" width="16"></rect>
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                  </svg>
+                  <span>Use E-mail automations to promote your products.</span>
+                </li>
+              </ul>
+            </div>
+        
+            <div id="modal--footer">
+              <label id="price"><sup>$</sup>39.99<sub>/mo</sub></label>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal" id="upgrade-btn">Upgrade to ELITE</button>
+            </div>
+          </form>
+        </div>
     </div>
-  
+  </div>
 
  
 
@@ -252,16 +784,40 @@
 
 
     <div class="bottom-container">
-      
-      <h2>Content</h2>
+      <div class="full-container">
+        <div class="mac-mockup">
+
+          <div class="card">
+            <span>Socials</span>
+            <a class="social-link" href="#">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 461.001 461.001" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#F61C0D;" d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728 c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137 C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607 c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"></path> </g> </g></svg>
+            </a>
+            <a class="social-link" href="#">
+              <svg fill="#000000" viewBox="0 0 512 512" id="icons" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M412.19,118.66a109.27,109.27,0,0,1-9.45-5.5,132.87,132.87,0,0,1-24.27-20.62c-18.1-20.71-24.86-41.72-27.35-56.43h.1C349.14,23.9,350,16,350.13,16H267.69V334.78c0,4.28,0,8.51-.18,12.69,0,.52-.05,1-.08,1.56,0,.23,0,.47-.05.71,0,.06,0,.12,0,.18a70,70,0,0,1-35.22,55.56,68.8,68.8,0,0,1-34.11,9c-38.41,0-69.54-31.32-69.54-70s31.13-70,69.54-70a68.9,68.9,0,0,1,21.41,3.39l.1-83.94a153.14,153.14,0,0,0-118,34.52,161.79,161.79,0,0,0-35.3,43.53c-3.48,6-16.61,30.11-18.2,69.24-1,22.21,5.67,45.22,8.85,54.73v.2c2,5.6,9.75,24.71,22.38,40.82A167.53,167.53,0,0,0,115,470.66v-.2l.2.2C155.11,497.78,199.36,496,199.36,496c7.66-.31,33.32,0,62.46-13.81,32.32-15.31,50.72-38.12,50.72-38.12a158.46,158.46,0,0,0,27.64-45.93c7.46-19.61,9.95-43.13,9.95-52.53V176.49c1,.6,14.32,9.41,14.32,9.41s19.19,12.3,49.13,20.31c21.48,5.7,50.42,6.9,50.42,6.9V131.27C453.86,132.37,433.27,129.17,412.19,118.66Z"></path></g></svg>
+            </a>
+            <a class="social-link" href="#">
+              <svg viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill="#5865F2" fill-rule="nonzero"> </path> </g> </g></svg>
+            </a>
+            <a class="social-link" href="#">
+              <svg fill="#000000" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M488.1 414.7V303.4L300.9 428l83.6 55.8zm254.1 137.7v-79.8l-59.8 39.9zM512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm278 533c0 1.1-.1 2.1-.2 3.1 0 .4-.1.7-.2 1a14.16 14.16 0 0 1-.8 3.2c-.2.6-.4 1.2-.6 1.7-.2.4-.4.8-.5 1.2-.3.5-.5 1.1-.8 1.6-.2.4-.4.7-.7 1.1-.3.5-.7 1-1 1.5-.3.4-.5.7-.8 1-.4.4-.8.9-1.2 1.3-.3.3-.6.6-1 .9-.4.4-.9.8-1.4 1.1-.4.3-.7.6-1.1.8-.1.1-.3.2-.4.3L525.2 786c-4 2.7-8.6 4-13.2 4-4.7 0-9.3-1.4-13.3-4L244.6 616.9c-.1-.1-.3-.2-.4-.3l-1.1-.8c-.5-.4-.9-.7-1.3-1.1-.3-.3-.6-.6-1-.9-.4-.4-.8-.8-1.2-1.3a7 7 0 0 1-.8-1c-.4-.5-.7-1-1-1.5-.2-.4-.5-.7-.7-1.1-.3-.5-.6-1.1-.8-1.6-.2-.4-.4-.8-.5-1.2-.2-.6-.4-1.2-.6-1.7-.1-.4-.3-.8-.4-1.2-.2-.7-.3-1.3-.4-2-.1-.3-.1-.7-.2-1-.1-1-.2-2.1-.2-3.1V427.9c0-1 .1-2.1.2-3.1.1-.3.1-.7.2-1a14.16 14.16 0 0 1 .8-3.2c.2-.6.4-1.2.6-1.7.2-.4.4-.8.5-1.2.2-.5.5-1.1.8-1.6.2-.4.4-.7.7-1.1.6-.9 1.2-1.7 1.8-2.5.4-.4.8-.9 1.2-1.3.3-.3.6-.6 1-.9.4-.4.9-.8 1.3-1.1.4-.3.7-.6 1.1-.8.1-.1.3-.2.4-.3L498.7 239c8-5.3 18.5-5.3 26.5 0l254.1 169.1c.1.1.3.2.4.3l1.1.8 1.4 1.1c.3.3.6.6 1 .9.4.4.8.8 1.2 1.3.7.8 1.3 1.6 1.8 2.5.2.4.5.7.7 1.1.3.5.6 1 .8 1.6.2.4.4.8.5 1.2.2.6.4 1.2.6 1.7.1.4.3.8.4 1.2.2.7.3 1.3.4 2 .1.3.1.7.2 1 .1 1 .2 2.1.2 3.1V597zm-254.1 13.3v111.3L723.1 597l-83.6-55.8zM281.8 472.6v79.8l59.8-39.9zM512 456.1l-84.5 56.4 84.5 56.4 84.5-56.4zM723.1 428L535.9 303.4v111.3l103.6 69.1zM384.5 541.2L300.9 597l187.2 124.6V610.3l-103.6-69.1z"></path> </g></svg>
+            </a>
+          </div>
+          
+        </div>
+        <div class="info-mac">
+          <h1></h1>
+        </div>
+      </div>
     </div>
 
     <div class="bottom-container2">
       
       <h2>Content</h2>
-    </div>
+    </div>-->
 
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 </body>
 
 <footer>

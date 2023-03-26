@@ -55,7 +55,6 @@ function formatNumber(number) {
     const propUtilitiesValue = isNaN(propUtilities) ? 0 : propUtilities;
 
 
-
     //Calculate outputs
     const grossRents = monthlyRentValue;
     const propManagementCalc = (propManagementValue / 100) * grossRents;

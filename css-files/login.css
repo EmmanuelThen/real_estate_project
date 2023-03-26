@@ -1,3 +1,7 @@
+body {
+  background: url(../resources/material_background.svg);
+}
+
 .login-container {
     display: flex;
     justify-content: center;
@@ -126,7 +130,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: #fff;
+    background: skyblue;
     border-radius: 7px;
     outline: none;
     color: #212121;
@@ -144,10 +148,10 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: #000;
+    background: skyblue;
     border-radius: 7px;
     outline: none;
-    color: #fff;
+    color: #000;
     border: 1px solid #e5e5e5;
     filter: drop-shadow(0px 1px 0px #efefef)
       drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));

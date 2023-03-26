@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thenterprise</title>
+  <link rel="stylesheet" href="../css/main.min.css">
   <link rel="stylesheet" href="../css-files/index.css">
   <link rel="stylesheet" href="../css-files/calculators-style.css">
   
@@ -22,21 +23,79 @@
 </head>
 
 <body>
-  <header>
-    <div class="links-container">
-      <a class="home-logo-top" href="../html-files/index.html"><img src="../resources/Thenterprise_main_logo.svg" width="60" height="60"></a>
-      <a href="">Residential</a>
-      <a href="">Commercial</a>
-      <a href="">Forum</a>
-      <a href="">Pricing</a>
-      <a href="../html-files/calculators.html">Free-Trial</a>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../html-files/index.html"><img src="../resources/Thenterprise_main_logo.svg"  width="50" height="50" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon ">
+          <div class="switch bg-secondary">
+          <input type="checkbox">
+          <div>
+              <span class="line-1"></span>
+              <span class="line-2"></span>
+              <span class="line-3"></span>
+          </div>
+          </div>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Buy
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sell
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Rent
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Free-trial
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../html-files/calculators.html">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+
+
+        <div id="nav-account">
+            <span type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#loginModal" id="nav-login">Log In</span>
+            
+            <span type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal" id="nav-signup">Sign Up</span>
+        </div>
+
+        
+        
+      </div>
     </div>
-    <nav>
-      <button><a href="../html-files/login_page.html" id="login-btn">Log in</a></button>
-      <button><a href="../html-files/signup_page.html">Sign up</a></button>
-      <img src="../resources/darkmode.png" id="icon" width="25" height="25">
-    </nav>
-  </header>
+  </nav>
+
+  
   <main>
     <div class="input-table-container">
       <div class="main-input-table">
@@ -174,26 +233,38 @@
 
     <div class="NOI-calc-container">
       <div class="NOI-calc">
-        <table>
+        <table id="pro-forma-table">
           <thead>
             <h1>Pro Forma Analysis</h1>
           </thead>
           <tbody>
             <tr>
               <td>
-      
+                  
                   <label for="gross-rent">Gross Rent:</label>
-                  <output id="gross-rent"></output>
+                  <div class="output-container">
+                    <output id="gross-rent">Results will populate as you enter values</output>
+                  </div>
       
               </td>
             </tr>
-      
+
+            <tr>
+              <td>
+                <div class="separator">
+                  <hr class="line">
+                  <span>Expenses</span>
+                  <hr class="line">
+                </div>
+              </td>
+            </tr>
+
             <div class="operating-expenses">
               <tr>
                 <td>
       
                     <label for="exp-1">Property Management:</label>
-                    <output id="exp-1"></output>
+                    <output id="exp-1">Results will populate as you enter values</output>
       
                 </td>
               </tr>
@@ -202,7 +273,7 @@
                 <td>
       
                     <label for="exp-2">Property Taxes:</label>
-                    <output id="exp-2"></output>
+                    <output id="exp-2">Results will populate as you enter values</output>
       
                 </td>
               </tr>
@@ -210,7 +281,7 @@
                 <td>
       
                     <label for="exp-3">Vacany Reserves:</label>
-                    <output id="exp-3"></output>
+                    <output id="exp-3">Results will populate as you enter values</output>
       
                 </td>
               </tr>
@@ -218,7 +289,7 @@
                 <td>
       
                     <label for="exp-4">Maintenance Reserves:</label>
-                    <output id="exp-4"></output>
+                    <output id="exp-4">Results will populate as you enter values</output>
       
                 </td>
               </tr>
@@ -226,7 +297,7 @@
                 <td>
       
                     <label for="exp-5">Insurance:</label>
-                    <output id="exp-5"></output>
+                    <output id="exp-5">Results will populate as you enter values</output>
       
                 </td>
               </tr>
@@ -234,16 +305,27 @@
                 <td>
       
                     <label for="exp-6">Utilities:</label>
-                    <output id="exp-6"></output>
+                    <output id="exp-6">Results will populate as you enter values</output>
       
                 </td>
               </tr>
             </div>
+
+            <tr>
+              <td>
+                <div class="separator">
+                  <hr class="line">
+                  <span>Expenses</span>
+                  <hr class="line">
+                </div>
+              </td>
+            </tr>
+
             <tr>
               <td>
       
-                  <label for="total-Opex">Total Operating Expenses:</label>
-                  <output id="total-Opex"></output>
+                  <label for="total-Opex">Total Operating Exp:</label>
+                  <output id="total-Opex">Results will populate as you enter values</output>
       
               </td>
             </tr>
@@ -251,7 +333,7 @@
               <td>
       
                   <label for="noi-monthly">Monthly NOI:</label>
-                  <output id="noi-monthly"></output>
+                  <output id="noi-monthly">Results will populate as you enter values</output>
       
               </td>
             </tr>
@@ -259,7 +341,7 @@
               <td>
       
                   <label for="noi-annual">Annual NOI:</label>
-                  <output id="noi-annual"></output>
+                  <output id="noi-annual">Results will populate as you enter values</output>
       
               </td>
             </tr>
@@ -267,7 +349,7 @@
               <td>
       
                   <label for="cap-rate">Capitalization Rate:</label>
-                  <output id="cap-rate"></output>
+                  <output id="cap-rate">Results will populate as you enter values</output>
       
               </td>
             </tr>
@@ -280,97 +362,109 @@
 
     <div class="mortgage-calc-container">
       <div class="mortgage-calc">
-        <table>
+        <table id="mortgage-calc-table">
           <thead>
             <h1>Mortgage Calculator</h1>
           </thead>
           <tbody>
             <tr>
               <td>
-                <div>
+                
                   <label for="sale-price2">Sale Price :</label>
-                  <output id="sale-price2"></output>
-                </div>
+                  <output id="sale-price2">Results will populate as you enter values</output>
+                
               </td>
             </tr>
             <tr>
               <td>
-                <div>
+                
                   <label for="down-pmt">Down Payment :</label>
-                  <output id="down-pmt"></output>
-                </div>
+                  <output id="down-pmt">Results will populate as you enter values</output>
+                
               </td>
             </tr>
             <tr>
               <td>
-                <div>
-                  <label for="closing-cost">Closing Cost :</label>:</label>
-                  <output id="closing-cost"></output>
-                </div>
+                
+                  <label for="closing-cost">Closing Cost :</label></label>
+                  <output id="closing-cost">Results will populate as you enter values</output>
+                
               </td>
             </tr>
             <tr>
               <td>
-                <div>
+                
                   <label for="ltv-ratio">Loan-to-value Ratio :</label>
-                  <output id="ltv-ratio"></output>
-                </div>
+                  <output id="ltv-ratio">Results will populate as you enter values</output>
+                
               </td>
             </tr>
             <tr>
               <td>
-                <div>
+                
                   <label for="principal">Principal :</label>
-                  <output id="principal"></output>
-                </div>
+                  <output id="principal">Results will populate as you enter values</output>
+                
               </td>
             </tr>
             <tr>
               <td>
-                <div>
+                
                   <label for="int">Interest Rate :</label>
-                  <output id="int"></output>
-                </div>
+                  <output id="int">Results will populate as you enter values</output>
+                
               </td>
             </tr>
             <tr>
               <td>
-                <div>
+                
                   <label for="loan-term">Loan Term (In Years) :</label>
-                  <output id="loan-term"></output>
+                  <output id="loan-term">Results will populate as you enter values</output>
+                
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="separator">
+                  <hr class="line">
+                  <span>Expenses</span>
+                  <hr class="line">
                 </div>
               </td>
             </tr>
+
             <tr>
+              
               <td>
-                <div>
+                
                   <label for="monthly-mortgage">Monthly Mortgage :</label>
-                  <output id="monthly-mortgage"></output>
-                </div>
+                  <output id="monthly-mortgage">Results will populate as you enter values</output>
+                
               </td>
             </tr>
             <tr>
               <td>
-                <div>
+                
                   <label for="monthly-profit">Monthly Net Profit :</label>
-                  <output id="monthly-profit"></output>
-                </div>
+                  <output id="monthly-profit">Results will populate as you enter values</output>
+                
               </td>
             </tr>
             <tr>
               <td>
-                <div>
+                
                   <label for="annual-profit">Annual Net Profit :</label>
-                  <output id="annual-profit"></output>
-                </div>
+                  <output id="annual-profit">Results will populate as you enter values</output>
+                
               </td>
             </tr>
             <tr>
               <td>
-                <div>
+                
                   <label for="annual-ROI">Annual ROI :</label>
-                  <output id="annual-ROI"></output>
-                </div>
+                  <output id="annual-ROI">Results will populate as you enter values</output>
+                
               </td>
             </tr>
           </tbody>

@@ -1,0 +1,41 @@
+@import '../node_modules/bootstrap/scss/vendor/rfs';
+//Here we can update any of the original variables from boostrap clean install from Sass files (has to be before @import because then we wouldnt be able to use any of the values
+//Custom variables
+$primary: #0d6efd;
+$secondary: #212529;
+$info: #efefef;
+
+$primary-text: #212121;
+$secondary-text: skyblue;
+
+
+//Importing functions and variables to add my own variables to themes
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+$custom-theme-colors: (
+    'altlight': transparent, 
+    'altdark': purple
+);
+
+$theme-colors: map-merge($custom-theme-colors , $theme-colors);
+
+//buttons customized
+//@import '../node_modules/bootstrap/scss/buttons';
+
+
+//$btn-white-space: nowrap;
+
+//nav customized
+//@import '../node_modules/bootstrap/scss/mixins';
+//@import '../node_modules/bootstrap/scss/nav';
+
+//$nav-link-hover-color: $secondary;
+//@include hover-color($nav-link-hover-color);
+
+
+
+//importing bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+

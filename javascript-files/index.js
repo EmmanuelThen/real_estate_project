@@ -36,4 +36,16 @@ hiddenElements.forEach((element) => observer.observe(element)); //Telling observ
 
 
 
+const container = document.getElementById("scroll-container");
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+  card.addEventListener("mouseover", () => {
+    container.classList.add("paused");
+  });
+
+  card.addEventListener("mouseout", () => {
+    container.classList.remove("paused");
+  });
+});
 
