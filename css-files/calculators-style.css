@@ -1,147 +1,39 @@
-.cap-rate-calc, .NOI-calc {
-    outline: 1px solid red;
+input {
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
+    
     
 }
 
-.NOI-calc input, .cap-rate-calc input {
-    display: block;
-    margin: 10px;
-}
-body {
-    background: url(../resources/material_background-calculators.svg);
-}
-
-main {
-    padding: 200px 0px;
-    display: grid;
-    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-    
-     
-}
-
-.main-input-table td, .main-input-table th, .main-input-table, .main-input-exp, .main-input-exp td, .main-input-exp th {
-    /*outline: 1px solid red;*/
-}
-
-.input-table-container {
-    
-}
-
-td {
-    padding: 10px;
+.main-input-exp td {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 10px;
 }
 
-input {
-    width: auto;
-    height: 40px;
-    padding: 10px;
+#td-output {
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+td output {
+    opacity: 0.7;
+}
+
+table {
     border-radius: 7px;
-    outline: 2px solid #212121;
-    border: 1px solid #e5e5e5;
-    filter: drop-shadow(0px 1px 0px #efefef)
-      drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
-    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
 
-label, td {
-    font-weight: 900;
+label {
+    font-weight: bolder;
 }
 
-#exp-header {
-    font-size: 1.5rem;
+.separator span {
+    color: #0d6efd;
 }
 
-output {
-    color: blue;
-}
-
-table, .NOI-calc, .mortgage-calc{
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
-    background-color: #fafafa;
-    box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
-      0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
-      0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 11px;
-    line-height: 3rem;
-    margin: 10px;
-    outline: 2px solid #212121;
-    overflow: hidden;
-    
- 
+#NOI-calc, #mortgage-calc {
+    display: none;
     
 }
-
-/*h1 {
-    background-image: linear-gradient(90deg, skyblue, blue, aqua, skyblue); 
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}*/
-
-.main-input-table {
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-}
-
-.main-input-exp {
-    display: flex;
-    justify-content: center;
-}
-
-/*to stop text from moving in table on resize*/
-.NOI-calc-container, .mortgage-calc-container {
-    display: flex;
-    justify-content: center;
-    min-width: 800px;
-    height: fit-content;
-    max-width: 800px;
-    
-}
-
-.operating-expenses {
-    
-}
-
-
-.NOI-calc, .mortgage-calc {
-    background-color: skyblue;
-    width: 75%;
-    max-width: 800px;
-    
-    
-    
-}
-
-
-
-.output-container {
-   
-}
-
-
-#mortgage-calc-table, #pro-forma-table {
-    width: 100%;
-}
-
-#mortgage-calc-table td, #pro-forma-table td {
-    
-}
-
-
-
-
-
-
-

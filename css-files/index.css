@@ -401,8 +401,9 @@ input:checked + div span.line-2 {
 }
 
 section {
-  background: url(../resources/material_background.svg);
+  background: url(../resources/material_background.svg) no-repeat;
   background-size: cover;
+  
 }
 
 .row {
@@ -421,7 +422,7 @@ button, #showcase-btn {
     border: none;
     border-radius: 7px;
     box-sizing: border-box;
-    color: #edf2fc;
+    color: #fff;
     cursor: pointer;
     display: inline-block;
     font-family: Questrial, 'Times New Roman', sans-serif;
@@ -440,7 +441,7 @@ button, #showcase-btn {
     -webkit-user-select: none;
     touch-action: manipulation;
     will-change: transform;
-    background-color: #0d6efd;
+    background-color: #5b8291;
    }
    
    button:disabled, #showcase-btn:disabled {
@@ -449,7 +450,7 @@ button, #showcase-btn {
    
    button:hover, #showcase-btn:hover {
     color: #fff;
-    background-color: #0d6efd;
+    background-color: #5b8;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
    }
@@ -927,7 +928,7 @@ footer a {
     padding: 20px;
     text-align: center;
     line-height: 30px;
-    margin-top: 5rem;
+    
 }
 
 
@@ -1022,25 +1023,30 @@ display: flex;
 }
 
 
- #scroll-container {
+ #scroll-container, #mtg-container {
   overflow-x: scroll;
   white-space: nowrap;
 }
 
 /*to hide scrollbar in firefox*/
-#scroll-container {
+#mtg-container {
   scrollbar-width: none; /* Hide scrollbar */
   -ms-overflow-style: none; /* Hide scrollbar in IE10+ */
 }
 
 /* to hide scrollbar in chrome/safari*/
-#scroll-container::-webkit-scrollbar {
+#mtg-container::-webkit-scrollbar {
   display: none;
 }
 
-#scroll-wrapper {
+#mtg-wrapper {
+  
   display: inline-block;
   animation: scroll 20s linear infinite;
+}
+
+#mtg-heading {
+  white-space: nowrap;
 }
 
 #card {
@@ -1050,6 +1056,11 @@ display: flex;
   margin-right: 20px;
   background-color: #ccc;
   border-radius: 7px;
+}
+
+#rates {
+  display: inline-block;
+  margin-right: 100px;
 }
 
 #card:hover {
@@ -1064,6 +1075,8 @@ display: flex;
     transform: translateX(calc(-220px * 4));
   }
 }
+
+
 
 
 

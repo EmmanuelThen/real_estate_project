@@ -1,3 +1,6 @@
+//calculate button
+const calculateButton = document.getElementById('calculate-button');
+
 //Main-input-table rent and price inputs
 const monthlyRentInput = document.getElementById('monthly-rent');
 const salePriceInput = document.getElementById('sale-price');
@@ -96,14 +99,16 @@ function formatNumber(number) {
 }
 
 // Event listeners For Input Fields
-monthlyRentInput.addEventListener('input', calculateProForma);
+/*monthlyRentInput.addEventListener('input', calculateProForma);
 salePriceInput.addEventListener('input', calculateProForma);
 propTaxInput.addEventListener('input', calculateProForma);
 propInsuranceInput.addEventListener('input', calculateProForma);
 propUtilitiesInput.addEventListener('input', calculateProForma);
 propManagementInput.addEventListener('input', calculateProForma);
 propVacancyInput.addEventListener('input', calculateProForma);
-propMaintenanceInput.addEventListener('input', calculateProForma);
+propMaintenanceInput.addEventListener('input', calculateProForma);*/
+
+
 
 
 
@@ -176,15 +181,7 @@ function calculateMortgageCalculator() {
     const closingCost = parseFloat(closingCostInput.value);
     const closingCostValue = isNaN(closingCost) ? 0 : closingCost;
 
-    //Variables needed for monthly mortgage payment
-    const monthlyIntRate = (intRateValue / 100) / 12;
-    const numberOfPayments = loanTermValue * 12;
-    const discountFactor = (Math.pow(1 + monthlyIntRate, numberOfPayments) - 1) /
-    (monthlyIntRate * Math.pow(1 + monthlyIntRate, numberOfPayments));
-
-
-
-
+    
 //////Needed to add these variables again in order to calculate the monthly net profit which includes monthlyNOI in the formula
     const monthlyRent = parseFloat(monthlyRentInput.value);
     const monthlyRentValue = isNaN(monthlyRent) ? 0 : monthlyRent;
@@ -225,6 +222,13 @@ function calculateMortgageCalculator() {
     const annualNoiCalc = monthlyNoiCalc * 12;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    //Variables needed for monthly mortgage payment
+    const monthlyIntRate = (intRateValue / 100) / 12;
+    const numberOfPayments = loanTermValue * 12;
+    const discountFactor = (Math.pow(1 + monthlyIntRate, numberOfPayments) - 1) /
+    (monthlyIntRate * Math.pow(1 + monthlyIntRate, numberOfPayments));
+
+
     //Calculate Outputs
     //const salePrice = parseFloat(salePriceInput.value);
     const ltvCalc = 100 - downPaymentValue;
@@ -233,6 +237,7 @@ function calculateMortgageCalculator() {
     const principalCalc = salePrice - downPaymentCalc;
     const intRateCalc = intRateValue / 100;
     const loanTermCalc = loanTermValue;
+    //fixing
     const monthlyMortgageCalc = principalCalc / discountFactor;
     const monthlyNetCalc = monthlyNoiCalc - monthlyMortgageCalc;
     const annualizedNetCalc = monthlyNetCalc * 12;
@@ -256,17 +261,28 @@ function calculateMortgageCalculator() {
     principalOutput.textContent = `${formattedPrincipal}`;
     intOutput.textContent = `${(intRateCalc * 100)}%`;
     loanTermOutput.textContent = `${loanTermCalc}`;
+
+    //need to fix outputs once u calcualte u cant go back and change inputs and get correct results
     monthlyMortgageOutput.textContent = `${formattedMonthlyMortgage}`;
     monthlyProfitOutput.textContent = `${formattedMonthlyNet}`;
     annualProfitOutput.textContent = `${formattedAnnualizedNet}`;
     annualROIOutput.textContent = `${formattedannualRoi.toFixed(2)}%`;
 
-    //To Remove NaN From Output While Calculating
+    
     
 };
 
 
-downPaymentInput.addEventListener('input', calculateMortgageCalculator);
+/*downPaymentInput.addEventListener('input', calculateMortgageCalculator);
 intRateInput.addEventListener('input', calculateMortgageCalculator);
 loanTermInput.addEventListener('input', calculateMortgageCalculator);
-closingCostInput.addEventListener('input', calculateMortgageCalculator);
+closingCostInput.addEventListener('input', calculateMortgageCalculator);*/
+function showResults() {
+    const proForma = document.getElementById('NOI-calc');
+    const mortgageCalculator = document.getElementById('mortgage-calc');
+    proForma.style.display = 'block';
+    mortgageCalculator.style.display = 'block';
+}
+calculateButton.addEventListener('click', calculateProForma)
+calculateButton.addEventListener('click', calculateMortgageCalculator)
+calculateButton.addEventListener('click', showResults)

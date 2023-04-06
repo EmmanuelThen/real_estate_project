@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="../css/main.min.css">
   <link rel="stylesheet" href="../css-files/index.css">
   <link rel="stylesheet" href="../css-files/calculators-style.css">
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
@@ -17,7 +16,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa&family=Questrial&display=swap" rel="stylesheet">
   <script type="module" src="../javascript-files/index.js"></script>
-  
   <script src="../modules/calculator-functions.js" async></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
@@ -97,380 +95,392 @@
 
   
   <main>
-    <div class="input-table-container">
-      <div class="main-input-table">
+    <div class="container text-center mt-5">
+      <div class="row">
+        <div class="col">
+          <div class="main-input-table">
 
+            <table class="table table-sm table-dark table-striped ">
+              <thead>
+                <tr>
+                  <th>
+                    <div class="sale-price">
+                      <label class="fw-normal" for="sale-price" id="exp-header">Sale Price</label>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="number" id="sale-price" min="0" placeholder="Enter Sale Price"></td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+          </div>
+          <div class="main-input-exp">
+            <table class="table table-sm table-dark table-striped">
+              <thead>
+                <th class="fw-normal" id="exp-header">Mortgage</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <label class="text-light" for="prop-dp">Downpayment (%) </label>
+                    <input type="number" id="prop-dp" min="0" placeholder="Enter Downpayment">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="text-light" for="prop-int">Interest Rate (%) </label>
+                    <input type="number" id="prop-int" min="0" placeholder="Enter Interest Rate">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="text-light" for="prop-loan">Loan Term (Years) </label>
+                    <input type="number" id="prop-loan" min="0" placeholder="Enter Loan Term">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="text-light" for="prop-closing">Closing Cost </label>
+                    <input type="number" id="prop-closing" min="0" placeholder="Enter Closing Cost">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col">
 
-        <table>
-          <thead>
-            <tr>
-              <th>
-                <div class="sale-price">
-                  <label for="sale-price" id="exp-header">Sale Price</label>
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><input type="number" id="sale-price" min="0" placeholder="Enter Sale Price"></td>
-            </tr>
-          </tbody>
-        </table>
-
-
-        <table>
-          <thead>
-            <tr>
-              <th id="exp-header">Total Rent/mo.</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><input id="monthly-rent" type="number" min="0" placeholder="Enter monthly rent"></td>
-            </tr>
-          </tbody>
-        </table>
-        
-
-
-      </div>
-      <div class="main-input-exp">
-        <table>
-          <thead>
-            <td id="exp-header">Expenses</td>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <label for="prop-tax">Property Tax Per Year</label>
-                <input type="number" id="prop-tax" min="0" placeholder="Enter Property Tax">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="prop-ins">Insurance Per Month</label>
-                <input type="number" id="prop-ins" min="0" placeholder="Enter Insurance">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="prop-utilities">Utilities Per Month</label>
-                <input type="number" id="prop-utilities" min="0" placeholder="Enter Utilities">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="prop-mngmt">Property Management (%) </label>
-                <input type="number" id="prop-mngmt" min="0" placeholder="Enter Management">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="prop-vacancy">Vacancy (%)</label>
-                <input type="number" id="prop-vacancy" min="0" placeholder="Enter Vacancy">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="prop-maintenance">Maintenance (%)</label>
-                <input type="number" id="prop-maintenance" min="0" placeholder="Enter Maintenance">
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="main-input-exp">
-        <table>
-          <thead>
-            <td id="exp-header">Mortgage</td>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <label for="prop-dp">Downpayment (%) </label>
-                <input type="number" id="prop-dp" min="0" placeholder="Enter Downpayment">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="prop-int">Interest Rate (%) </label>
-                <input type="number" id="prop-int" min="0" placeholder="Enter Interest Rate">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="prop-loan">Loan Term (Years) </label>
-                <input type="number" id="prop-loan" min="0" placeholder="Enter Loan Term">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="prop-closing">Closing Cost </label>
-                <input type="number" id="prop-closing" min="0" placeholder="Enter Closing Cost">
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- <div class="cap-rate-calc">
-      <h1>Cap Rate Calculator</h1>
-      <div>
-        <label for="property-value">Property Value:</label>
-        <input type="number" id="property-value" min="0" placeholder="Enter Property Value">
-      </div>
-      <div>
-        <label for="noi">Annual NOI:</label>
-        <input type="number" id="noi" min="0" placeholder="Enter Annual NOI">
-      </div>
-      <div>
-        <label for="cap-rate">Cap Rate:</label>
-        <output id="cap-rate"></output>
-      </div>
-    </div> -->
-
-    <div class="NOI-calc-container">
-      <div class="NOI-calc">
-        <table id="pro-forma-table">
-          <thead>
-            <h1>Pro Forma Analysis</h1>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                  
-                  <label for="gross-rent">Gross Rent:</label>
-                  <div class="output-container">
-                    <output id="gross-rent">Results will populate as you enter values</output>
-                  </div>
-      
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="separator">
-                  <hr class="line">
-                  <span>Expenses</span>
-                  <hr class="line">
-                </div>
-              </td>
-            </tr>
-
-            <div class="operating-expenses">
+          <table class="table table-sm table-dark table-striped ">
+            <thead>
               <tr>
-                <td>
-      
-                    <label for="exp-1">Property Management:</label>
-                    <output id="exp-1">Results will populate as you enter values</output>
-      
-                </td>
+                <th class="fw-normal" id="exp-header">Total Rent/mo.</th>
               </tr>
-      
+            </thead>
+            <tbody>
               <tr>
-                <td>
-      
-                    <label for="exp-2">Property Taxes:</label>
-                    <output id="exp-2">Results will populate as you enter values</output>
-      
-                </td>
+                <td><input id="monthly-rent" type="number" min="0" placeholder="Enter monthly rent"></td>
               </tr>
-              <tr>
-                <td>
-      
-                    <label for="exp-3">Vacany Reserves:</label>
-                    <output id="exp-3">Results will populate as you enter values</output>
-      
-                </td>
-              </tr>
-              <tr>
-                <td>
-      
-                    <label for="exp-4">Maintenance Reserves:</label>
-                    <output id="exp-4">Results will populate as you enter values</output>
-      
-                </td>
-              </tr>
-              <tr>
-                <td>
-      
-                    <label for="exp-5">Insurance:</label>
-                    <output id="exp-5">Results will populate as you enter values</output>
-      
-                </td>
-              </tr>
-              <tr>
-                <td>
-      
-                    <label for="exp-6">Utilities:</label>
-                    <output id="exp-6">Results will populate as you enter values</output>
-      
-                </td>
-              </tr>
-            </div>
+            </tbody>
+          </table>
 
-            <tr>
-              <td>
-                <div class="separator">
-                  <hr class="line">
-                  <span>Expenses</span>
-                  <hr class="line">
-                </div>
-              </td>
-            </tr>
+          <hr>
 
-            <tr>
-              <td>
-      
-                  <label for="total-Opex">Total Operating Exp:</label>
-                  <output id="total-Opex">Results will populate as you enter values</output>
-      
-              </td>
-            </tr>
-            <tr>
-              <td>
-      
-                  <label for="noi-monthly">Monthly NOI:</label>
-                  <output id="noi-monthly">Results will populate as you enter values</output>
-      
-              </td>
-            </tr>
-            <tr>
-              <td>
-      
-                  <label for="noi-annual">Annual NOI:</label>
-                  <output id="noi-annual">Results will populate as you enter values</output>
-      
-              </td>
-            </tr>
-            <tr>
-              <td>
-      
-                  <label for="cap-rate">Capitalization Rate:</label>
-                  <output id="cap-rate">Results will populate as you enter values</output>
-      
-              </td>
-            </tr>
-          </tbody>
-        </table>
+          <div class="main-input-exp">
+            <table class="table table-sm table-dark table-striped ">
+              <thead>
+                <th class="fw-normal" id="exp-header">Expenses</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <label for="prop-tax">Property Tax Per Year</label>
+                    <input type="number" id="prop-tax" min="0" placeholder="Enter Property Tax">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="prop-ins">Insurance Per Month</label>
+                    <input type="number" id="prop-ins" min="0" placeholder="Enter Insurance">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="prop-utilities">Utilities Per Month</label>
+                    <input type="number" id="prop-utilities" min="0" placeholder="Enter Utilities">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="prop-mngmt">Property Management (%) </label>
+                    <input type="number" id="prop-mngmt" min="0" placeholder="Enter Management">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="prop-vacancy">Vacancy (%)</label>
+                    <input type="number" id="prop-vacancy" min="0" placeholder="Enter Vacancy">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="prop-maintenance">Maintenance (%)</label>
+                    <input type="number" id="prop-maintenance" min="0" placeholder="Enter Maintenance">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
-    </div>
 
+      <button id="calculate-button">Calculate</button>
+
+      <div class="row">
+        <div class="col">
+
+          <div id="mortgage-calc">
+            <table id="mortgage-calc-table">
+              <thead>
+                <h1>Mortgage Calculator</h1>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="td-output">
+                    
+                      <label for="sale-price2">Sale Price :</label>
+                      <output id="sale-price2"></output>
+                      
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td id="td-output">
+                    
+                      <label for="down-pmt">Down Payment :</label>
+                      <output id="down-pmt"></output>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td id="td-output">
+                    
+                      <label for="closing-cost">Closing Cost :</label></label>
+                      <output id="closing-cost"></output>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td id="td-output">
+                    
+                      <label for="ltv-ratio">Loan-to-value Ratio :</label>
+                      <output id="ltv-ratio"></output>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td id="td-output">
+                    
+                      <label for="principal">Principal :</label>
+                      <output id="principal"></output>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td id="td-output">
+                    
+                      <label for="int">Interest Rate :</label>
+                      <output id="int"></output>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td id="td-output">
+                    
+                      <label for="loan-term">Loan Term (In Years) :</label>
+                      <output id="loan-term"></output>
+                    
+                  </td>
+                </tr>
     
-
-    <div class="mortgage-calc-container">
-      <div class="mortgage-calc">
-        <table id="mortgage-calc-table">
-          <thead>
-            <h1>Mortgage Calculator</h1>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                
-                  <label for="sale-price2">Sale Price :</label>
-                  <output id="sale-price2">Results will populate as you enter values</output>
-                
-              </td>
-            </tr>
-            <tr>
-              <td>
-                
-                  <label for="down-pmt">Down Payment :</label>
-                  <output id="down-pmt">Results will populate as you enter values</output>
-                
-              </td>
-            </tr>
-            <tr>
-              <td>
-                
-                  <label for="closing-cost">Closing Cost :</label></label>
-                  <output id="closing-cost">Results will populate as you enter values</output>
-                
-              </td>
-            </tr>
-            <tr>
-              <td>
-                
-                  <label for="ltv-ratio">Loan-to-value Ratio :</label>
-                  <output id="ltv-ratio">Results will populate as you enter values</output>
-                
-              </td>
-            </tr>
-            <tr>
-              <td>
-                
-                  <label for="principal">Principal :</label>
-                  <output id="principal">Results will populate as you enter values</output>
-                
-              </td>
-            </tr>
-            <tr>
-              <td>
-                
-                  <label for="int">Interest Rate :</label>
-                  <output id="int">Results will populate as you enter values</output>
-                
-              </td>
-            </tr>
-            <tr>
-              <td>
-                
-                  <label for="loan-term">Loan Term (In Years) :</label>
-                  <output id="loan-term">Results will populate as you enter values</output>
-                
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="separator">
-                  <hr class="line">
-                  <span>Expenses</span>
-                  <hr class="line">
+                <tr>
+                  <td>
+                    <div class="separator">
+                      <hr class="line">
+                      <span>Results</span>
+                      <hr class="line">
+                    </div>
+                  </td>
+                </tr>
+    
+                <tr>
+                  
+                  <td id="td-output">
+                    
+                      <label for="monthly-mortgage">Monthly Mortgage :</label>
+                      <output id="monthly-mortgage"></output>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td id="td-output">
+                    
+                      <label for="monthly-profit">Monthly Net Profit :</label>
+                      <output id="monthly-profit"></output>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td id="td-output">
+                    
+                      <label for="annual-profit">Annual Net Profit :</label>
+                      <output id="annual-profit"></output>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td id="td-output">
+                    
+                      <label for="annual-ROI">Annual ROI :</label>
+                      <output id="annual-ROI"></output>
+                    
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+        </div>
+        <div class="col">
+          <div id="NOI-calc">
+            <table id="pro-forma-table">
+              <thead>
+                <h1>Pro Forma Analysis</h1>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="td-output">
+                      
+                      <label for="gross-rent">Gross Rent:</label>
+                      <div class="output-container">
+                        <output id="gross-rent"></output>
+                      </div>
+          
+                  </td>
+                </tr>
+    
+                <tr>
+                  <td>
+                    <div class="separator">
+                      <hr class="line">
+                      <span>Expenses</span>
+                      <hr class="line">
+                    </div>
+                  </td>
+                </tr>
+    
+                <div class="operating-expenses">
+                  <tr>
+                    <td id="td-output">
+          
+                        <label for="exp-1">Property Management:</label>
+                        <output id="exp-1"></output>
+          
+                    </td>
+                  </tr>
+          
+                  <tr>
+                    <td id="td-output">
+          
+                        <label for="exp-2">Property Taxes:</label>
+                        <output id="exp-2"></output>
+          
+                    </td>
+                  </tr>
+                  <tr>
+                    <td id="td-output">
+          
+                        <label for="exp-3">Vacany Reserves:</label>
+                        <output id="exp-3"></output>
+          
+                    </td>
+                  </tr>
+                  <tr>
+                    <td id="td-output">
+          
+                        <label for="exp-4">Maintenance Reserves:</label>
+                        <output id="exp-4"></output>
+          
+                    </td>
+                  </tr>
+                  <tr>
+                    <td id="td-output">
+          
+                        <label for="exp-5">Insurance:</label>
+                        <output id="exp-5"></output>
+          
+                    </td>
+                  </tr>
+                  <tr>
+                    <td id="td-output">
+          
+                        <label for="exp-6">Utilities:</label>
+                        <output id="exp-6"></output>
+          
+                    </td>
+                  </tr>
                 </div>
-              </td>
-            </tr>
-
-            <tr>
-              
-              <td>
-                
-                  <label for="monthly-mortgage">Monthly Mortgage :</label>
-                  <output id="monthly-mortgage">Results will populate as you enter values</output>
-                
-              </td>
-            </tr>
-            <tr>
-              <td>
-                
-                  <label for="monthly-profit">Monthly Net Profit :</label>
-                  <output id="monthly-profit">Results will populate as you enter values</output>
-                
-              </td>
-            </tr>
-            <tr>
-              <td>
-                
-                  <label for="annual-profit">Annual Net Profit :</label>
-                  <output id="annual-profit">Results will populate as you enter values</output>
-                
-              </td>
-            </tr>
-            <tr>
-              <td>
-                
-                  <label for="annual-ROI">Annual ROI :</label>
-                  <output id="annual-ROI">Results will populate as you enter values</output>
-                
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    
+                <tr>
+                  <td>
+                    <div class="separator">
+                      <hr class="line">
+                      <span>Results</span>
+                      <hr class="line">
+                    </div>
+                  </td>
+                </tr>
+    
+                <tr>
+                  <td id="td-output">
+          
+                      <label for="total-Opex">Total Operating Exp:</label>
+                      <output id="total-Opex"></output>
+          
+                  </td>
+                </tr>
+                <tr>
+                  <td id="td-output">
+          
+                      <label for="noi-monthly">Monthly NOI:</label>
+                      <output id="noi-monthly"></output>
+          
+                  </td>
+                </tr>
+                <tr>
+                  <td id="td-output">
+          
+                      <label for="noi-annual">Annual NOI:</label>
+                      <output id="noi-annual"></output>
+          
+                  </td>
+                </tr>
+                <tr>
+                  <td id="td-output">
+          
+                      <label for="cap-rate">Capitalization Rate:</label>
+                      <output id="cap-rate"></output>
+          
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+        </div>
+        <div class="col">
+          3 of 3
+        </div>
       </div>
     </div>
 
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
   </body>
+
+
+
+
+
+
+
+
+
+
+
+
+  
